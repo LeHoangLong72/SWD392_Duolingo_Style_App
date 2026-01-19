@@ -1,0 +1,6 @@
+@NihongoLearning_HostAddress = http://localhost:5208
+
+GET {{NihongoLearning_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
