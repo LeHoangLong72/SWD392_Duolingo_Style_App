@@ -22,4 +22,6 @@ public partial class User
     public DateTime? LastLearnedDate { get; set; }
 
     public virtual ICollection<UserKanjiProgress> UserKanjiProgresses { get; set; } = new List<UserKanjiProgress>();
+
+    public virtual ICollection<UserLessonProgress> UserLessonProgresses { get; set; } = new List<UserLessonProgress>();
 }

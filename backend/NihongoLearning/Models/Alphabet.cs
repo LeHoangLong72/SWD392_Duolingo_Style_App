@@ -15,5 +15,7 @@ public partial class Alphabet
 
     public string? Meaning { get; set; }
 
+    public virtual ICollection<LessonContent> LessonContents { get; set; } = new List<LessonContent>();
+
     public virtual ICollection<UserKanjiProgress> UserKanjiProgresses { get; set; } = new List<UserKanjiProgress>();
 }
