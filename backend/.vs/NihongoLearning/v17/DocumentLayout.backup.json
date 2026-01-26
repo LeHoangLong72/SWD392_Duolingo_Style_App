@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Backend_SWD\\NihongoLearning\\",
+  "WorkspaceRootPath": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_swd\\nihongolearning\\nihongolearning\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\dtos\\shopdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\dtos\\shopdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_swd\\nihongolearning\\nihongolearning\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_swd\\nihongolearning\\nihongolearning\\controllers\\lessonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\controllers\\lessonscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_swd\\nihongolearning\\nihongolearning\\controllers\\alphabetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\controllers\\alphabetscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|d:\\backend_duolingo\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\userinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\userinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +34,88 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\User.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Models\\User.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\User.cs",
+              "RelativeToolTip": "NihongoLearning\\Models\\User.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwBkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T02:35:36.158Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlphabetsController.cs",
-              "DocumentMoniker": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Controllers\\AlphabetsController.cs",
-              "RelativeDocumentMoniker": "NihongoLearning\\Controllers\\AlphabetsController.cs",
-              "ToolTip": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Controllers\\AlphabetsController.cs",
-              "RelativeToolTip": "NihongoLearning\\Controllers\\AlphabetsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Controllers\\ShopController.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "NihongoLearning\\Controllers\\ShopController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwHcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T01:38:45.486Z",
+              "WhenOpened": "2026-01-26T02:41:55.182Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LessonsController.cs",
-              "DocumentMoniker": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Controllers\\LessonsController.cs",
-              "RelativeDocumentMoniker": "NihongoLearning\\Controllers\\LessonsController.cs",
-              "ToolTip": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Controllers\\LessonsController.cs",
-              "RelativeToolTip": "NihongoLearning\\Controllers\\LessonsController.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAAkwLEAAAAsAAAAAAAAAA==",
+              "Title": "ShopDTOs.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\ShopDTOs.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\DTOs\\ShopDTOs.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\ShopDTOs.cs",
+              "RelativeToolTip": "NihongoLearning\\DTOs\\ShopDTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T01:38:45.819Z",
+              "WhenOpened": "2026-01-26T02:41:12.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Lesson.cs",
-              "DocumentMoniker": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Models\\Lesson.cs",
-              "RelativeDocumentMoniker": "NihongoLearning\\Models\\Lesson.cs",
-              "ToolTip": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Models\\Lesson.cs",
-              "RelativeToolTip": "NihongoLearning\\Models\\Lesson.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T01:38:33.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Models\\AppDbContext.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "NihongoLearning\\Models\\AppDbContext.cs",
-              "ToolTip": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\Models\\AppDbContext.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\AppDbContext.cs",
               "RelativeToolTip": "NihongoLearning\\Models\\AppDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwMsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T01:30:03.921Z",
+              "WhenOpened": "2026-01-26T02:37:35.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShopItem.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\ShopItem.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Models\\ShopItem.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\ShopItem.cs",
+              "RelativeToolTip": "NihongoLearning\\Models\\ShopItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T02:37:11.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserInventory.cs",
+              "DocumentMoniker": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\UserInventory.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Models\\UserInventory.cs",
+              "ToolTip": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\UserInventory.cs",
+              "RelativeToolTip": "NihongoLearning\\Models\\UserInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T02:35:08.438Z",
               "EditorCaption": ""
             },
             {

@@ -33,6 +33,8 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<UserLessonProgress> UserLessonProgresses { get; set; }
 
+    public virtual DbSet<UserInventory> UserInventories { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Alphabet>(entity =>
@@ -92,6 +94,9 @@ public partial class AppDbContext : DbContext
             entity.HasKey(e => e.ItemId).HasName("PK__ShopItem__727E838B60BC4174");
 
             entity.Property(e => e.ItemName).HasMaxLength(100);
+            entity.Property(e => e.ItemType).HasMaxLength(50);
+            entity.Property(e => e.IconUrl).HasMaxLength(255);
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
         });
 
         modelBuilder.Entity<Topic>(entity =>
@@ -121,6 +126,32 @@ public partial class AppDbContext : DbContext
                 .HasDefaultValue(0)
                 .HasColumnName("TotalXP");
             entity.Property(e => e.Username).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<UserInventory>(entity =>
+        {
+            entity.HasKey(e => e.InventoryId).HasName("PK__UserInve__F5FDE6B3A8B5C7D2");
+
+            entity.ToTable("UserInventories");
+
+            entity.Property(e => e.Quantity).HasDefaultValue(1);
+            entity.Property(e => e.IsUsed).HasDefaultValue(false);
+            entity.Property(e => e.PurchasedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.UsedDate).HasColumnType("datetime");
+
+            entity.HasOne(d => d.User)
+                .WithMany(p => p.UserInventories)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_UserInventories_Users");
+
+            entity.HasOne(d => d.Item)
+                .WithMany(p => p.UserInventories)
+                .HasForeignKey(d => d.ItemId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_UserInventories_ShopItems");
         });
 
         modelBuilder.Entity<UserKanjiProgress>(entity =>

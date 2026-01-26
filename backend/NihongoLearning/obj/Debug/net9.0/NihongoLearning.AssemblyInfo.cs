@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NihongoLearning")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ae6f47d159b30f07ea5cdcc8da041de521e274f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NihongoLearning")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NihongoLearning")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

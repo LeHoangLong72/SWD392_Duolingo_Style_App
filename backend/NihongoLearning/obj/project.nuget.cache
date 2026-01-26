@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XMrwRmXu8MA=",
+  "dgSpecHash": "zZB4qqz3hpQ=",
   "success": true,
-  "projectFilePath": "D:\\Backend_SWD\\NihongoLearning\\NihongoLearning\\NihongoLearning.csproj",
+  "projectFilePath": "D:\\Backend_Duolingo\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\NihongoLearning.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

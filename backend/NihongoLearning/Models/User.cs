@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace NihongoLearning.Models;
+﻿namespace NihongoLearning.Models;
 
 public partial class User
 {
@@ -24,4 +21,6 @@ public partial class User
     public virtual ICollection<UserKanjiProgress> UserKanjiProgresses { get; set; } = new List<UserKanjiProgress>();
 
     public virtual ICollection<UserLessonProgress> UserLessonProgresses { get; set; } = new List<UserLessonProgress>();
+
+    public virtual ICollection<UserInventory> UserInventories { get; set; } = new List<UserInventory>();
 }
