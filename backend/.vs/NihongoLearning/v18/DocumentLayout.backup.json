@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\dtos\\achievementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\dtos\\achievementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\dtos\\checkachievementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\dtos\\checkachievementrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\controllers\\achievementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\controllers\\achievementscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\nihongolearning\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{205822D9-5CE0-4C63-9996-93C05B112ED3}|NihongoLearning\\NihongoLearning.csproj|solutionrelative:nihongolearning\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AchievementDto.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\AchievementDto.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\DTOs\\AchievementDto.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\AchievementDto.cs",
+              "RelativeToolTip": "NihongoLearning\\DTOs\\AchievementDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:40:53.127Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260126010640_AddAchievementSystem.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs",
+              "RelativeToolTip": "NihongoLearning\\Migrations\\20260126010640_AddAchievementSystem.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T01:06:40.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LearningController.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\LearningController.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Controllers\\LearningController.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\LearningController.cs",
+              "RelativeToolTip": "NihongoLearning\\Controllers\\LearningController.cs",
+              "ViewState": "AgIAAMkBAAAAAAAAAAAuwOMBAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:58:24.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Models\\AppDbContext.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "NihongoLearning\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAAwAIBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:57:51.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CheckAchievementRequest.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\CheckAchievementRequest.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\DTOs\\CheckAchievementRequest.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\DTOs\\CheckAchievementRequest.cs",
+              "RelativeToolTip": "NihongoLearning\\DTOs\\CheckAchievementRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:57:11.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AchievementsController.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\AchievementsController.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Controllers\\AchievementsController.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Controllers\\AchievementsController.cs",
+              "RelativeToolTip": "NihongoLearning\\Controllers\\AchievementsController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwGYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:45:38.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\User.cs",
+              "RelativeDocumentMoniker": "NihongoLearning\\Models\\User.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\NihongoLearning\\Models\\User.cs",
+              "RelativeToolTip": "NihongoLearning\\Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T00:36:49.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -33,6 +33,16 @@ public partial class AppDbContext : DbContext
 
     public virtual DbSet<UserLessonProgress> UserLessonProgresses { get; set; }
 
+    // ========== THÊM MỚI ==========
+    public virtual DbSet<Question> Questions { get; set; }
+
+    public virtual DbSet<QuestionOption> QuestionOptions { get; set; }
+
+    public virtual DbSet<LearningSession> LearningSessions { get; set; }
+    // ==============================
+
+    public virtual DbSet<Achievement> Achievements { get; set; }
+    public virtual DbSet<UserAchievement> UserAchievements { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Alphabet>(entity =>
@@ -164,6 +174,92 @@ public partial class AppDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_UserLessonProgress_Users");
+        });
+
+
+        // ========== THÊM MỚI VÀO CUỐI METHOD ==========
+        modelBuilder.Entity<Question>(entity =>
+        {
+            entity.HasKey(e => e.QuestionId).HasName("PK__Question__0DC06F8C");
+
+            entity.Property(e => e.QuestionType).HasMaxLength(50).IsRequired();
+            entity.Property(e => e.QuestionText).HasMaxLength(500).IsRequired();
+            entity.Property(e => e.AudioUrl).HasMaxLength(500);
+            entity.Property(e => e.ImageUrl).HasMaxLength(500);
+            entity.Property(e => e.Points).HasDefaultValue(10);
+
+            entity.HasOne(q => q.Lesson)
+                .WithMany()
+                .HasForeignKey(q => q.LessonId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<QuestionOption>(entity =>
+        {
+            entity.HasKey(e => e.OptionId).HasName("PK__Question__92C7A1DF");
+
+            entity.Property(e => e.OptionText).HasMaxLength(200).IsRequired();
+
+            entity.HasOne(o => o.Question)
+                .WithMany(q => q.QuestionOptions)
+                .HasForeignKey(o => o.QuestionId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        modelBuilder.Entity<LearningSession>(entity =>
+        {
+            entity.HasKey(e => e.SessionId).HasName("PK__Learning__C9F49290");
+
+            entity.Property(e => e.Status).HasMaxLength(20).IsRequired();
+            entity.Property(e => e.Lives).HasDefaultValue(5);
+            entity.Property(e => e.StartTime).HasDefaultValueSql("GETDATE()");
+
+            entity.HasOne(s => s.User)
+                .WithMany()
+                .HasForeignKey(s => s.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            entity.HasOne(s => s.Lesson)
+                .WithMany()
+                .HasForeignKey(s => s.LessonId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        // ⬇️ THÊM MỚI
+        modelBuilder.Entity<Achievement>(entity =>
+        {
+            entity.HasKey(e => e.AchievementId);
+
+            entity.Property(e => e.AchievementName).HasMaxLength(200).IsRequired();
+            entity.Property(e => e.Description).HasMaxLength(500);
+            entity.Property(e => e.Category).HasMaxLength(50).IsRequired();
+            entity.Property(e => e.Condition).HasMaxLength(100).IsRequired();
+            entity.Property(e => e.IconUrl).HasMaxLength(500);
+            entity.Property(e => e.Rarity).HasMaxLength(20).HasDefaultValue("Common");
+            entity.Property(e => e.IsActive).HasDefaultValue(true);
+            entity.Property(e => e.CreatedDate).HasDefaultValueSql("GETDATE()");
+        });
+
+        modelBuilder.Entity<UserAchievement>(entity =>
+        {
+            entity.HasKey(e => e.UserAchievementId);
+
+            entity.Property(e => e.CurrentProgress).HasDefaultValue(0);
+            entity.Property(e => e.IsUnlocked).HasDefaultValue(false);
+            entity.Property(e => e.CreatedDate).HasDefaultValueSql("GETDATE()");
+
+            entity.HasOne(d => d.User)
+                .WithMany(p => p.UserAchievements)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.Achievement)
+                .WithMany(p => p.UserAchievements)
+                .HasForeignKey(d => d.AchievementId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Index để tránh duplicate
+            entity.HasIndex(e => new { e.UserId, e.AchievementId }).IsUnique();
         });
 
         OnModelCreatingPartial(modelBuilder);
