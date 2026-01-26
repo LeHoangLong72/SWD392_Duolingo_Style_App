@@ -24,4 +24,5 @@ public partial class User
     public virtual ICollection<UserKanjiProgress> UserKanjiProgresses { get; set; } = new List<UserKanjiProgress>();
 
     public virtual ICollection<UserLessonProgress> UserLessonProgresses { get; set; } = new List<UserLessonProgress>();
+    public virtual ICollection<UserAchievement> UserAchievements { get; set; } = new List<UserAchievement>();
 }
