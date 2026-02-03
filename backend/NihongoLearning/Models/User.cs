@@ -1,26 +1,26 @@
-﻿namespace NihongoLearning.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public partial class User
+namespace NihongoLearning.Models;
+
+[Table("Users")]
+public class User
 {
-    public int UserId { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int UserID { get; set; }
 
-    public string Username { get; set; } = null!;
-
-    public string? Email { get; set; }
-
-    public string? PasswordHash { get; set; }
-
-    public int? Gems { get; set; }
-
-    public int? TotalXp { get; set; }
-
-    public int? StreakCount { get; set; }
-
-    public DateTime? LastLearnedDate { get; set; }
-
-    public virtual ICollection<UserKanjiProgress> UserKanjiProgresses { get; set; } = new List<UserKanjiProgress>();
-
-    public virtual ICollection<UserLessonProgress> UserLessonProgresses { get; set; } = new List<UserLessonProgress>();
-
-    public virtual ICollection<UserInventory> UserInventories { get; set; } = new List<UserInventory>();
+    [Required, EmailAddress]
+    public string Email { get; set; }
+    [Required]
+    public string PasswordHash { get; set; }
+    public string Role { get; set; } = "User";
+    public int TotalXP { get; set; }
+    public int HeartCount { get; set; }
+    public int CurrentGems { get; set; }
+    public int StreakCount { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public bool IsActive { get; set; }
+    public UserProfile UserProfile { get; set; }
+    
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore; // Thêm dòng này
-using NihongoLearning.Models;      // Thêm dòng này (Thay bằng namespace của bạn)
+using NihongoLearning.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
