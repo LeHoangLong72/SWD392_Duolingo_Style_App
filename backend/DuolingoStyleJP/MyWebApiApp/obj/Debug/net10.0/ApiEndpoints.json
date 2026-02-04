@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "MyWebApiApp.DTOs.Account.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "MyWebApiApp.DTOs.Account.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AlphabetController",
+    "Method": "GetHiragana",
+    "RelativePath": "api/alphabets/hiragana",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AlphabetController",
+    "Method": "GetKanji",
+    "RelativePath": "api/alphabets/kanji",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "level",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AlphabetController",
+    "Method": "GetKatakana",
+    "RelativePath": "api/alphabets/katakana",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
