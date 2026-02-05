@@ -1,0 +1,16 @@
+﻿namespace MyWebApiApp.Models
+{
+    public class Transaction
+    {
+        public int TransactionId { get; set; }
+        public int UserId { get; set; }
+        public int ItemId { get; set; }
+        public int Quantity { get; set; }
+        public int TotalPrice { get; set; }
+        public string TransactionType { get; set; } = "purchase";
+        public DateTime TransactionDate { get; set; } = DateTime.UtcNow;
+
+        public AppUser User { get; set; } = null!;
+        public Item Item { get; set; } = null!;
+    }
+}

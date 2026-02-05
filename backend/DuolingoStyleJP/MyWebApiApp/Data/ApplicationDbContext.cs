@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyWebApiApp.Models;
+using System.Reflection.Emit;
 
 namespace MyWebApiApp.Data
 {
@@ -13,11 +14,20 @@ namespace MyWebApiApp.Data
         }
 
         public DbSet<Alphabet> Alphabets { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<UserItem> UserItems { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
+        public DbSet<Node> Nodes { get; set; }
+        public DbSet<UserLessonProgress> UserLessonProgresses { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<Item>()
+        .ToTable("Item");
 
-            
+
 
             List<IdentityRole> roles = new List<IdentityRole>
             {

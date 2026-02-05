@@ -98,7 +98,8 @@ namespace MyWebApiApp
             
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IAlphabetRepository, AlphabetRepository>();
-
+            builder.Services.AddScoped<IShopRepository, ShopRepository>();
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
