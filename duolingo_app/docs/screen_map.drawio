@@ -1,0 +1,195 @@
+<mxfile host="app.diagrams.net" modified="2026-02-04T00:00:00.000Z" agent="5.0" version="22.1.11" etag="abc123">
+  <diagram name="Screen Map - Duolingo App" id="ScreenMapDuolingo">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="title" value="SCREEN MAP - DUOLINGO APP (HỌC TIẾNG NHẬT)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="527" y="30" width="600" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="author_note" value="Review 1 - Mục 10: Screen List + Screen Map&#xa;Ngày: 04/02/2026" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="40" width="250" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="section1" value="PHẦN 1: USER FLOW CHÍNH (Flow mở app lần đầu)" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="1494" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="app_launch" value="APP LAUNCH" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=2;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="150" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="onboarding" value="ONBOARDING SCREEN&#xa;(Chưa có - Medium)&#xa;Giới thiệu app lần đầu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#2196f3;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="450" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="login" value="LOGIN SCREEN&#xa;(Chưa có - CRITICAL)&#xa;Đăng nhập/Đăng ký" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=2;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="750" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="level_selection" value="LEVEL SELECTION&#xa;(Chưa có - CRITICAL)&#xa;Chọn N5-N1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=2;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1050" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="main_screen" value="MAIN SCREEN&#xa;(Đã có - Core)&#xa;Bottom Navigation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=3;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1350" y="160" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="app_launch" target="onboarding">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="onboarding" target="login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="login" target="level_selection">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="level_selection" target="main_screen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="section2" value="PHẦN 2: BOTTOM NAVIGATION (7 TABS)" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="1494" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_learn" value="1. HỌC&#xa;(Đã có)&#xa;Unit 1-10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_characters" value="2. CHỮ CÁI&#xa;(Đã có)&#xa;Hiragana/Katakana" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="290" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_practice" value="3. LUYỆN TẬP&#xa;(Đã có)&#xa;Daily/Super" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="500" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_leaderboard" value="4. BẢNG XH&#xa;(Đã có)&#xa;Xếp hạng XP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="710" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_quests" value="5. NHIỆM VỤ&#xa;(Đã có)&#xa;Daily/Weekly" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="920" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_shop" value="6. CỬA HÀNG&#xa;(Đã có)&#xa;Mua items" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1130" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="tab_profile" value="7. HỒ SƠ&#xa;(Đã có)&#xa;Thống kê" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1340" y="360" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="section3" value="PHẦN 3: LESSON FLOW (QUAN TRỌNG NHẤT! - Core của app)" style="text;html=1;strokeColor=#d32f2f;fillColor=#ffebee;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;fontColor=#d32f2f;" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="1494" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lesson_note" value="Note: Phần này em sẽ focus làm ở Sprint 2&#xa;vì đây là core nhất của app" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#d32f2f;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="600" width="200" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lesson_screen" value="LESSON SCREEN&#xa;(Chưa có - CRITICAL!)&#xa;&#xa;Câu hỏi trắc nghiệm&#xa;Ghép từ/câu&#xa;Nghe và chọn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=3;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="600" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lesson_result" value="RESULT SCREEN&#xa;(Chưa có - CRITICAL!)&#xa;&#xa;XP earned&#xa;Accuracy %&#xa;Review sai" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=3;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="750" y="600" width="220" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow_learn_to_lesson" value="Click bài học" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="tab_learn" target="lesson_screen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="500" />
+              <mxPoint x="510" y="500" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_lesson_to_result" value="Hoàn thành" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;" edge="1" parent="1" source="lesson_screen" target="lesson_result">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow_result_back" value="Tiếp tục" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="lesson_result" target="tab_learn">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="780" />
+              <mxPoint x="170" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow_result_retry" value="Ôn lại" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="lesson_result" target="lesson_screen">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="750" />
+              <mxPoint x="510" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="section4" value="PHẦN 4: SUB-SCREENS" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="820" width="1494" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="settings" value="SETTINGS&#xa;(Chưa có - High)&#xa;Cài đặt app" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff9800;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="1200" y="880" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="char_practice" value="CHARACTER&#xa;PRACTICE&#xa;(Chưa có - High)&#xa;Viết chữ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff9800;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="290" y="880" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="guidebook" value="GUIDEBOOK&#xa;(Chưa có - Medium)&#xa;Từ điển" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#2196f3;strokeWidth=2;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="80" y="880" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow_profile_settings" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="tab_profile" target="settings">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="arrow_char_practice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="tab_characters" target="char_practice">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="500" />
+              <mxPoint x="380" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="legend_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1000" width="300" height="160" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend_title" value="CHÚ THÍCH (LEGEND)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="1010" width="300" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend1" value="✅ Đã có (Core)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#4caf50;strokeWidth=2;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="100" y="1040" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend2" value="🔴 Chưa có (Critical)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#f44336;strokeWidth=2;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="1040" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend3" value="🟠 Chưa có (High)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff9800;strokeWidth=2;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="100" y="1080" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend4" value="🔵 Chưa có (Medium)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#2196f3;strokeWidth=2;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="240" y="1080" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="footer_note" value="💡 Thiết kế dựa trên Duolingo gốc nhưng có điều chỉnh cho tiếng Nhật&#xa;(thêm Characters screen cho Hiragana/Katakana)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1120" width="260" height="30" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
