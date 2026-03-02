@@ -1,0 +1,309 @@
+﻿using Microsoft.EntityFrameworkCore;
+using MyWebApiApp.Data;
+using MyWebApiApp.DTOs.LessonContent;
+using MyWebApiApp.Interfaces;
+using MyWebApiApp.Models;
+
+namespace MyWebApiApp.Repository
+{
+    public class LessonContentRepository : ILessonContentRepository
+    {
+        private readonly ApplicationDbContext _context;
+
+        public LessonContentRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<LessonContentResponse?> GetLessonContentAsync(int lessonId)
+        {
+            var lesson = await _context.Lessons
+                .Include(l => l.Node)
+                .FirstOrDefaultAsync(l => l.LessonId == lessonId);
+
+            if (lesson == null)
+                return null;
+
+            var questions = await _context.Questions
+                .Include(q => q.Options)
+                .Where(q => q.LessonId == lessonId)
+                .OrderBy(q => q.OrderIndex)
+                .ToListAsync();
+
+            return new LessonContentResponse
+            {
+                LessonId = lesson.LessonId,
+                Title = lesson.Title,
+                BaseXP = lesson.BaseXP,
+                Questions = questions.Select(q => new QuestionResponse
+                {
+                    QuestionId = q.QuestionId,
+                    QuestionType = q.QuestionType,
+                    QuestionText = q.QuestionText,
+                    AudioUrl = q.AudioUrl,
+                    ImageUrl = q.ImageUrl,
+                    OrderIndex = q.OrderIndex,
+                    Options = q.Options.OrderBy(o => o.OrderIndex).Select(o => new OptionResponse
+                    {
+                        OptionId = o.OptionId,
+                        OptionText = o.OptionText,
+                        ImageUrl = o.ImageUrl,
+                        AudioUrl = o.AudioUrl,
+                        OrderIndex = o.OrderIndex
+                    }).ToList()
+                }).ToList()
+            };
+        }
+
+        public async Task<StartLessonResponse?> StartLessonAsync(string userId, int lessonId)
+        {
+            var lesson = await _context.Lessons.FindAsync(lessonId);
+            if (lesson == null)
+                return null;
+
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null)
+                return null;
+
+            // Refill hearts if needed (1 heart every 30 minutes)
+            await RefillHeartsAsync(user);
+
+            var questionCount = await _context.Questions
+                .Where(q => q.LessonId == lessonId)
+                .CountAsync();
+
+            var attempt = new LessonAttempt
+            {
+                UserId = userId,
+                LessonId = lessonId,
+                StartedAt = DateTime.UtcNow,
+                TotalQuestions = questionCount,
+                CorrectAnswers = 0,
+                TotalXPEarned = 0,
+                HeartsLost = 0,
+                IsCompleted = false,
+                AccuracyRate = 0
+            };
+
+            _context.LessonAttempts.Add(attempt);
+            await _context.SaveChangesAsync();
+
+            return new StartLessonResponse
+            {
+                AttemptId = attempt.AttemptId,
+                LessonId = lessonId,
+                Title = lesson.Title,
+                TotalQuestions = questionCount,
+                CurrentHearts = user.Hearts,
+                StartedAt = attempt.StartedAt
+            };
+        }
+
+        public async Task<SubmitAnswerResponse> SubmitAnswerAsync(string userId, int attemptId, SubmitAnswerRequest request)
+        {
+            var attempt = await _context.LessonAttempts
+                .Include(a => a.User)
+                .FirstOrDefaultAsync(a => a.AttemptId == attemptId && a.UserId == userId);
+
+            if (attempt == null)
+                throw new Exception("Lesson attempt not found");
+
+            var question = await _context.Questions
+                .FirstOrDefaultAsync(q => q.QuestionId == request.QuestionId);
+
+            if (question == null)
+                throw new Exception("Question not found");
+
+            // Validate answer
+            bool isCorrect = await ValidateAnswerAsync(request.QuestionId, request.AnswerGiven);
+            int xpEarned = 0;
+            int heartsLost = 0;
+
+            if (isCorrect)
+            {
+                xpEarned = question.XPReward;
+                attempt.CorrectAnswers++;
+                attempt.TotalXPEarned += xpEarned;
+                
+                // Update user XP
+                attempt.User.CurrentXP += xpEarned;
+                attempt.User.TotalXP += xpEarned;
+                
+                // Check for level up (100 XP per level)
+                await CheckAndLevelUpAsync(attempt.User);
+            }
+            else
+            {
+                // Lose 1 heart on wrong answer
+                if (attempt.User.Hearts > 0)
+                {
+                    attempt.User.Hearts--;
+                    heartsLost = 1;
+                    attempt.HeartsLost++;
+                }
+            }
+
+            // Save user answer
+            var userAnswer = new UserAnswer
+            {
+                UserId = userId,
+                QuestionId = request.QuestionId,
+                LessonId = attempt.LessonId,
+                AnswerGiven = request.AnswerGiven,
+                IsCorrect = isCorrect,
+                XPEarned = xpEarned,
+                AnsweredAt = DateTime.UtcNow
+            };
+
+            _context.UserAnswers.Add(userAnswer);
+            await _context.SaveChangesAsync();
+
+            return new SubmitAnswerResponse
+            {
+                IsCorrect = isCorrect,
+                CorrectAnswer = question.CorrectAnswer,
+                XPEarned = xpEarned,
+                CurrentHearts = attempt.User.Hearts,
+                Explanation = isCorrect ? "すばらしい！ (Excellent!)" : "がんばって！ (Keep trying!)"
+            };
+        }
+
+        public async Task<CompleteLessonResponse?> CompleteLessonAsync(string userId, int attemptId)
+        {
+            var attempt = await _context.LessonAttempts
+                .Include(a => a.User)
+                .FirstOrDefaultAsync(a => a.AttemptId == attemptId && a.UserId == userId);
+
+            if (attempt == null)
+                return null;
+
+            var oldLevel = attempt.User.Level;
+
+            attempt.CompletedAt = DateTime.UtcNow;
+            attempt.IsCompleted = true;
+            attempt.AccuracyRate = attempt.TotalQuestions > 0 
+                ? (double)attempt.CorrectAnswers / attempt.TotalQuestions * 100 
+                : 0;
+
+            // Update streak
+            await UpdateStreakAsync(attempt.User);
+
+            await _context.SaveChangesAsync();
+
+            return new CompleteLessonResponse
+            {
+                IsCompleted = true,
+                TotalQuestions = attempt.TotalQuestions,
+                CorrectAnswers = attempt.CorrectAnswers,
+                TotalXPEarned = attempt.TotalXPEarned,
+                HeartsLost = attempt.HeartsLost,
+                AccuracyRate = Math.Round(attempt.AccuracyRate, 2),
+                NewLevel = attempt.User.Level,
+                CurrentXP = attempt.User.CurrentXP,
+                LeveledUp = attempt.User.Level > oldLevel
+            };
+        }
+
+        public async Task<List<Question>> GetQuestionsForLessonAsync(int lessonId)
+        {
+            return await _context.Questions
+                .Include(q => q.Options)
+                .Where(q => q.LessonId == lessonId)
+                .OrderBy(q => q.OrderIndex)
+                .ToListAsync();
+        }
+
+        public async Task<bool> ValidateAnswerAsync(int questionId, string answer)
+        {
+            var question = await _context.Questions.FindAsync(questionId);
+            if (question == null)
+                return false;
+
+            // Normalize strings for comparison (trim, lowercase)
+            var normalizedAnswer = answer.Trim().ToLower();
+            var normalizedCorrect = question.CorrectAnswer.Trim().ToLower();
+
+            return normalizedAnswer == normalizedCorrect;
+        }
+
+        private async Task RefillHeartsAsync(AppUser user)
+        {
+            if (user.Hearts >= user.MaxHearts)
+            {
+                user.LastHeartRefillTime = DateTime.UtcNow;
+                return;
+            }
+
+            var lastRefill = user.LastHeartRefillTime ?? DateTime.UtcNow.AddHours(-1);
+            var minutesSinceRefill = (DateTime.UtcNow - lastRefill).TotalMinutes;
+            
+            // Refill 1 heart every 30 minutes
+            int heartsToRefill = (int)(minutesSinceRefill / 30);
+            
+            if (heartsToRefill > 0)
+            {
+                user.Hearts = Math.Min(user.Hearts + heartsToRefill, user.MaxHearts);
+                user.LastHeartRefillTime = DateTime.UtcNow;
+            }
+        }
+
+        private async Task CheckAndLevelUpAsync(AppUser user)
+        {
+            int xpForNextLevel = user.Level * 100; // 100 XP per level
+            
+            while (user.CurrentXP >= xpForNextLevel)
+            {
+                user.CurrentXP -= xpForNextLevel;
+                user.Level++;
+                
+                // Reward gems on level up
+                user.Gems += 10;
+                
+                xpForNextLevel = user.Level * 100;
+            }
+        }
+
+        private async Task UpdateStreakAsync(AppUser user)
+        {
+            var today = DateTime.UtcNow.Date;
+            var lastStudyDate = user.LastStudyDate?.Date;
+
+            if (lastStudyDate == null)
+            {
+                // First time studying
+                user.CurrentStreak = 1;
+                user.LastStudyDate = today;
+            }
+            else if (lastStudyDate == today)
+            {
+                // Already studied today, no change
+                return;
+            }
+            else if (lastStudyDate == today.AddDays(-1))
+            {
+                // Studied yesterday, increment streak
+                user.CurrentStreak++;
+                user.LastStudyDate = today;
+            }
+            else if (user.StreakFreezeCount > 0 && lastStudyDate == today.AddDays(-2))
+            {
+                // Used streak freeze
+                user.StreakFreezeCount--;
+                user.CurrentStreak++;
+                user.LastStudyDate = today;
+            }
+            else
+            {
+                // Streak broken
+                user.CurrentStreak = 1;
+                user.LastStudyDate = today;
+            }
+
+            // Update longest streak
+            if (user.CurrentStreak > user.LongestStreak)
+            {
+                user.LongestStreak = user.CurrentStreak;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
     public class UserItem
     {
         public int UserItemId { get; set; }
-        public int UserId { get; set; }
+        public string? UserId { get; set; } // Keep as string - proper FK to AspNetUsers
         public int ItemId { get; set; }
         public int Quantity { get; set; } = 1;
         public DateTime PurchasedAt { get; set; } = DateTime.Now;

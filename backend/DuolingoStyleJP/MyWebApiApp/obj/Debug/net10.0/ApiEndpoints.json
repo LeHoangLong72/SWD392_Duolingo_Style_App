@@ -69,8 +69,60 @@
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "Method": "GetPath",
+    "RelativePath": "api/learning/japanese-path",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "Method": "GetMyProgress",
+    "RelativePath": "api/learning/my-progress",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "Method": "GetLessonContent",
+    "RelativePath": "api/lesson-content/{lessonId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lessonId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
     "Method": "CompleteLesson",
-    "RelativePath": "api/learning/complete-lesson/{lessonId}",
+    "RelativePath": "api/lesson-content/complete/{attemptId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attemptId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "Method": "StartLesson",
+    "RelativePath": "api/lesson-content/start/{lessonId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -84,9 +136,30 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LearningController",
-    "Method": "GetPath",
-    "RelativePath": "api/learning/japanese-path",
+    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "Method": "SubmitAnswer",
+    "RelativePath": "api/lesson-content/submit-answer/{attemptId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attemptId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "MyWebApiApp.DTOs.LessonContent.SubmitAnswerRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ProfileController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Profile/profile",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -107,42 +180,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MyWebApiApp.Controllers.ShopController",
-    "Method": "GetUserItems",
-    "RelativePath": "api/shop/my-items",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MyWebApiApp.Controllers.ShopController",
-    "Method": "PurchaseItem",
-    "RelativePath": "api/shop/purchase",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "MyWebApiApp.DTOs.Purchase.PurchaseRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MyWebApiApp.Controllers.ShopController",
-    "Method": "GetTransactionHistory",
-    "RelativePath": "api/shop/transactions",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   }
 ]

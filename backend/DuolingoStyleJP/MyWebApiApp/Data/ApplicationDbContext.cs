@@ -15,19 +15,25 @@ namespace MyWebApiApp.Data
 
         public DbSet<Alphabet> Alphabets { get; set; }
         public DbSet<Item> Items { get; set; }
-        public DbSet<Transaction> Transactions { get; set; }
         public DbSet<UserItem> UserItems { get; set; }
-        public DbSet<Unit> Units { get; set; }
         public DbSet<Lesson> Lessons { get; set; }
-        public DbSet<Node> Nodes { get; set; }
-        public DbSet<UserLessonProgress> UserLessonProgresses { get; set; }
+        public DbSet<UserProgress> UserProgress { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<QuestionOption> QuestionOptions { get; set; }
+        public DbSet<LessonAttempt> LessonAttempts { get; set; }
+        public DbSet<UserAnswer> UserAnswers { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
             builder.Entity<Item>()
-        .ToTable("Item");
+                .ToTable("Items");
 
-
+            // Configure Question entity
+            builder.Entity<Question>()
+                    .HasMany(q => q.QuestionOptions)
+                    .WithOne(o => o.Question)
+                    .HasForeignKey(o => o.QuestionId)
+                    .OnDelete(DeleteBehavior.Cascade);
 
             List<IdentityRole> roles = new List<IdentityRole>
             {

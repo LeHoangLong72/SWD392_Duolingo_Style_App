@@ -1,0 +1,15 @@
+﻿namespace MyWebApiApp.Models
+{
+    public class Node
+    {
+        public int NodeId { get; set; }
+        public int UnitId { get; set; }
+        public string? UserId { get; set; } // Changed to string to match AspNetUsers.Id
+        public string NodeType { get; set; }
+        public int Position { get; set; }
+
+        // Navigation property
+        public AppUser? User { get; set; }
+        public List<Lesson> Lessons { get; set; }
+    }
+}

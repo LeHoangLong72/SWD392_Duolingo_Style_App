@@ -4788,10 +4788,11 @@ E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebAp
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\staticwebassets.development.json
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\swae.build.ex.cache
-E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\MyWebApi.76ACBF84.Up2Date
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\MyWebApiApp.dll
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\refint\MyWebApiApp.dll
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\MyWebApiApp.pdb
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\MyWebApiApp.genruntimeconfig.cache
 E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\ref\MyWebApiApp.dll
+E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+E:\Coding\Code\C_sharp\SWD392_Duolingo_Style_App\backend\DuolingoStyleJP\MyWebApiApp\bin\Debug\net10.0\Tests\LessonContent.postman_collection.json

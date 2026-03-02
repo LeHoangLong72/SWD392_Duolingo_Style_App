@@ -95,11 +95,13 @@ namespace MyWebApiApp
                 };
             });
 
-            
+
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IAlphabetRepository, AlphabetRepository>();
             builder.Services.AddScoped<IShopRepository, ShopRepository>();
-           
+            builder.Services.AddScoped<ILearningRepository, LearningRepository>();
+            builder.Services.AddScoped<ILessonContentRepository, LessonContentRepository>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

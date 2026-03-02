@@ -1,0 +1,14 @@
+﻿namespace MyWebApiApp.Models
+{
+    public class UserLessonProgress
+    {
+        public int Id { get; set; }
+        public string UserId { get; set; } // Keep as string - proper FK to AspNetUsers
+        public int NodeId { get; set; }
+        public string Status { get; set; }
+        public int CurrentLessonIndex { get; set; }
+
+        // Navigation property
+        public AppUser User { get; set; }
+    }
+}
