@@ -1,0 +1,6 @@
+@Shop_Duolingo_HostAddress = http://localhost:5081
+
+GET {{Shop_Duolingo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
