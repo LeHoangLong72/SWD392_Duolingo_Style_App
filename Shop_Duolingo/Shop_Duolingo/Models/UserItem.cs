@@ -15,6 +15,12 @@ public partial class UserItem
 
     public bool IsEquipped { get; set; }
 
+    // ✅ THÊM MỚI: Thời điểm trang bị
+    public DateTime? EquippedAt { get; set; }
+
+    // ✅ THÊM MỚI: Thời điểm hết hạn
+    public DateTime? ExpiresAt { get; set; }
+
     public virtual Item Item { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;

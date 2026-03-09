@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\PRN222\\Shop_Duolingo\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\SWD392\\Shop_Duolingo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\service\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\service\\shopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\service\\ishopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\service\\ishopservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\dto\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\dto\\itemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|d:\\swd392\\shop_duolingo\\shop_duolingo\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27458B64-EAEC-4E9B-9983-54C96129AAA0}|Shop_Duolingo\\Shop_Duolingo.csproj|solutionrelative:shop_duolingo\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +43,82 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShopService.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Service\\ShopService.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\Service\\ShopService.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Service\\ShopService.cs",
+              "RelativeToolTip": "Shop_Duolingo\\Service\\ShopService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:56:48.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IShopService.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Service\\IShopService.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\Service\\IShopService.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Service\\IShopService.cs",
+              "RelativeToolTip": "Shop_Duolingo\\Service\\IShopService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:56:46.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemDto.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\DTO\\ItemDto.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\DTO\\ItemDto.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\DTO\\ItemDto.cs",
+              "RelativeToolTip": "Shop_Duolingo\\DTO\\ItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:54:07.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\Models\\User.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\User.cs",
+              "RelativeToolTip": "Shop_Duolingo\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:45:34.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserItem.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\UserItem.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\Models\\UserItem.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\UserItem.cs",
+              "RelativeToolTip": "Shop_Duolingo\\Models\\UserItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:45:05.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "Shop_Duolingo\\Models\\Item.cs",
+              "ToolTip": "D:\\SWD392\\Shop_Duolingo\\Shop_Duolingo\\Models\\Item.cs",
+              "RelativeToolTip": "Shop_Duolingo\\Models\\Item.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAhwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:44:38.556Z",
+              "EditorCaption": ""
             }
           ]
         }

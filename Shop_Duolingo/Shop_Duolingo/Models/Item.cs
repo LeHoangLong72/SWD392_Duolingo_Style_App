@@ -25,5 +25,8 @@ public partial class Item
 
     public DateTime CreatedAt { get; set; }
 
+    // ✅ THÊM MỚI: Thời gian hiệu lực (phút)
+    public int? DurationMinutes { get; set; }
+
     public virtual ICollection<UserItem> UserItems { get; set; } = new List<UserItem>();
 }

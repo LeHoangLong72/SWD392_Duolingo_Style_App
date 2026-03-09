@@ -23,9 +23,25 @@ namespace Shop_Duolingo.Services
                 .Where(ui => ui.UserId == userId)
                 .ToListAsync();
 
+            var now = DateTime.UtcNow;
+
             return items.Select(item =>
             {
                 var userItem = userItems.FirstOrDefault(ui => ui.ItemId == item.Id);
+
+                // ✅ Kiểm tra item đã hết hạn chưa
+                bool isExpired = false;
+                int? remainingMinutes = null;
+
+                if (userItem != null && userItem.IsEquipped && userItem.ExpiresAt.HasValue)
+                {
+                    isExpired = userItem.ExpiresAt.Value <= now;
+                    if (!isExpired)
+                    {
+                        remainingMinutes = (int)(userItem.ExpiresAt.Value - now).TotalMinutes;
+                    }
+                }
+
                 return new ItemDto
                 {
                     Id = item.Id,
@@ -37,7 +53,14 @@ namespace Shop_Duolingo.Services
                     ImageUrl = item.ImageUrl,
                     Category = item.Category,
                     IsPurchased = userItem != null,
-                    IsEquipped = userItem?.IsEquipped ?? false
+                    IsEquipped = userItem?.IsEquipped ?? false,
+
+                    // ✅ THÊM THÔNG TIN THỜI HẠN
+                    DurationMinutes = item.DurationMinutes,
+                    EquippedAt = userItem?.EquippedAt,
+                    ExpiresAt = userItem?.ExpiresAt,
+                    IsExpired = isExpired,
+                    RemainingMinutes = remainingMinutes
                 };
             }).ToList();
         }
@@ -94,7 +117,9 @@ namespace Shop_Duolingo.Services
                 UserId = userId,
                 ItemId = itemId,
                 PurchasedAt = DateTime.UtcNow,
-                IsEquipped = false
+                IsEquipped = false,
+                EquippedAt = null,
+                ExpiresAt = null
             };
 
             _context.UserItems.Add(userItem);
@@ -120,24 +145,49 @@ namespace Shop_Duolingo.Services
                 return new UserProfileDto();
             }
 
+            var now = DateTime.UtcNow;
+
             return new UserProfileDto
             {
                 Id = user.Id,
                 Username = user.Username,
                 Email = user.Email,
                 Gems = user.Gems,
-                PurchasedItems = user.UserItems.Select(ui => new ItemDto
+                PurchasedItems = user.UserItems.Select(ui =>
                 {
-                    Id = ui.Item.Id,
-                    Name = ui.Item.Name,
-                    NameVi = ui.Item.NameVi,
-                    Description = ui.Item.Description,
-                    DescriptionVi = ui.Item.DescriptionVi,
-                    Price = ui.Item.Price,
-                    ImageUrl = ui.Item.ImageUrl,
-                    Category = ui.Item.Category,
-                    IsPurchased = true,
-                    IsEquipped = ui.IsEquipped
+                    // ✅ Kiểm tra hết hạn
+                    bool isExpired = false;
+                    int? remainingMinutes = null;
+
+                    if (ui.IsEquipped && ui.ExpiresAt.HasValue)
+                    {
+                        isExpired = ui.ExpiresAt.Value <= now;
+                        if (!isExpired)
+                        {
+                            remainingMinutes = (int)(ui.ExpiresAt.Value - now).TotalMinutes;
+                        }
+                    }
+
+                    return new ItemDto
+                    {
+                        Id = ui.Item.Id,
+                        Name = ui.Item.Name,
+                        NameVi = ui.Item.NameVi,
+                        Description = ui.Item.Description,
+                        DescriptionVi = ui.Item.DescriptionVi,
+                        Price = ui.Item.Price,
+                        ImageUrl = ui.Item.ImageUrl,
+                        Category = ui.Item.Category,
+                        IsPurchased = true,
+                        IsEquipped = ui.IsEquipped,
+
+                        // ✅ THÊM THÔNG TIN THỜI HẠN
+                        DurationMinutes = ui.Item.DurationMinutes,
+                        EquippedAt = ui.EquippedAt,
+                        ExpiresAt = ui.ExpiresAt,
+                        IsExpired = isExpired,
+                        RemainingMinutes = remainingMinutes
+                    };
                 }).ToList()
             };
         }
@@ -153,17 +203,30 @@ namespace Shop_Duolingo.Services
                 return false;
             }
 
-            // PHÂN LOẠI: Powerup (consumable) vs Outfit/Decoration
+            var now = DateTime.UtcNow;
+
+            // ✅ XỬ LÝ THEO LOẠI ITEM
             if (userItem.Item.Category == "powerup")
             {
-                // POWERUP: Sử dụng 1 lần → XÓA KHỎI INVENTORY
-                _context.UserItems.Remove(userItem);
+                // POWERUP: Kích hoạt với thời hạn
+                if (userItem.Item.DurationMinutes.HasValue)
+                {
+                    userItem.IsEquipped = true;
+                    userItem.EquippedAt = now;
+                    userItem.ExpiresAt = now.AddMinutes(userItem.Item.DurationMinutes.Value);
+                }
+                else
+                {
+                    // Nếu không có duration → Dùng 1 lần và xóa
+                    _context.UserItems.Remove(userItem);
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }
             else if (userItem.Item.Category == "outfit")
             {
-                // OUTFIT: Chỉ trang bị 1 outfit cùng lúc
+                // OUTFIT: Chỉ trang bị 1 outfit cùng lúc (VÔ THỜI HẠN)
                 var equippedOutfits = await _context.UserItems
                     .Include(ui => ui.Item)
                     .Where(ui => ui.UserId == userId && ui.Item.Category == "outfit" && ui.IsEquipped)
@@ -172,16 +235,42 @@ namespace Shop_Duolingo.Services
                 foreach (var outfit in equippedOutfits)
                 {
                     outfit.IsEquipped = false;
+                    outfit.EquippedAt = null;
+                    outfit.ExpiresAt = null;
                 }
 
                 userItem.IsEquipped = !userItem.IsEquipped;
+
+                if (userItem.IsEquipped)
+                {
+                    userItem.EquippedAt = now;
+                    userItem.ExpiresAt = null; // Outfit không có thời hạn
+                }
+                else
+                {
+                    userItem.EquippedAt = null;
+                    userItem.ExpiresAt = null;
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }
             else if (userItem.Item.Category == "decoration")
             {
-                // DECORATION: Toggle on/off (không giới hạn số lượng)
+                // DECORATION: Toggle on/off (VÔ THỜI HẠN)
                 userItem.IsEquipped = !userItem.IsEquipped;
+
+                if (userItem.IsEquipped)
+                {
+                    userItem.EquippedAt = now;
+                    userItem.ExpiresAt = null; // Decoration không có thời hạn
+                }
+                else
+                {
+                    userItem.EquippedAt = null;
+                    userItem.ExpiresAt = null;
+                }
+
                 await _context.SaveChangesAsync();
                 return true;
             }

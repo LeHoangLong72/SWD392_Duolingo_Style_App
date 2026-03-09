@@ -1,4 +1,6 @@
-﻿namespace Shop_Duolingo.DTOs
+﻿using System;
+
+namespace Shop_Duolingo.DTOs
 {
     public class ItemDto
     {
@@ -12,5 +14,11 @@
         public string Category { get; set; } = string.Empty;
         public bool IsPurchased { get; set; }
         public bool IsEquipped { get; set; }
+
+        public int? DurationMinutes { get; set; }
+        public DateTime? EquippedAt { get; set; }
+        public DateTime? ExpiresAt { get; set; }
+        public bool IsExpired { get; set; }
+        public int? RemainingMinutes { get; set; }
     }
 }
