@@ -6,14 +6,14 @@ using MyWebApiApp.Interfaces;
 
 namespace MyWebApiApp.Controllers
 {
-    [Route("api/lesson-content")]
+    [Route("api/lesson-attempt")]
     [ApiController]
     [Authorize]
-    public class LessonContentController : ControllerBase
+    public class LessonAttemptController : ControllerBase
     {
-        private readonly ILessonContentRepository _lessonContentRepo;
+        private readonly ILessonAttemptRepository _lessonContentRepo;
 
-        public LessonContentController(ILessonContentRepository lessonContentRepo)
+        public LessonAttemptController(ILessonAttemptRepository lessonContentRepo)
         {
             _lessonContentRepo = lessonContentRepo;
         }

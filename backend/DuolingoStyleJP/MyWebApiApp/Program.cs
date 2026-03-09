@@ -100,7 +100,9 @@ namespace MyWebApiApp
             builder.Services.AddScoped<IAlphabetRepository, AlphabetRepository>();
             builder.Services.AddScoped<IShopRepository, ShopRepository>();
             builder.Services.AddScoped<ILearningRepository, LearningRepository>();
-            builder.Services.AddScoped<ILessonContentRepository, LessonContentRepository>();
+            builder.Services.AddScoped<ILessonAttemptRepository, LessonAttemptRepository>();
+            builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+            builder.Services.AddScoped<IStreakRepository, StreakRepository>();
 
             var app = builder.Build();
 

@@ -3,7 +3,7 @@ using MyWebApiApp.Models;
 
 namespace MyWebApiApp.Interfaces
 {
-    public interface ILessonContentRepository
+    public interface ILessonAttemptRepository
     {
         Task<LessonContentDto?> GetLessonContentAsync(int lessonId);
         Task<LessonContentDto?> StartLessonAsync(string userId, int lessonId);

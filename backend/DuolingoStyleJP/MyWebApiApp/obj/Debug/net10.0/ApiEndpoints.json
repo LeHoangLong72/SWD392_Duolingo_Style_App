@@ -88,9 +88,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "ContainingType": "MyWebApiApp.Controllers.LessonAttemptController",
     "Method": "GetLessonContent",
-    "RelativePath": "api/lesson-content/{lessonId}",
+    "RelativePath": "api/lesson-attempt/{lessonId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -104,9 +104,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "ContainingType": "MyWebApiApp.Controllers.LessonAttemptController",
     "Method": "CompleteLesson",
-    "RelativePath": "api/lesson-content/complete/{attemptId}",
+    "RelativePath": "api/lesson-attempt/complete/{attemptId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -120,9 +120,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "ContainingType": "MyWebApiApp.Controllers.LessonAttemptController",
     "Method": "StartLesson",
-    "RelativePath": "api/lesson-content/start/{lessonId}",
+    "RelativePath": "api/lesson-attempt/start/{lessonId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -136,9 +136,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LessonContentController",
+    "ContainingType": "MyWebApiApp.Controllers.LessonAttemptController",
     "Method": "SubmitAnswer",
-    "RelativePath": "api/lesson-content/submit-answer/{attemptId}",
+    "RelativePath": "api/lesson-attempt/submit-answer/{attemptId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -159,12 +159,64 @@
   {
     "ContainingType": "MyWebApiApp.Controllers.ProfileController",
     "Method": "GetProfile",
-    "RelativePath": "api/Profile/profile",
+    "RelativePath": "api/profile/display",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/profile/modify",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyWebApiApp.DTOs.Profile.UpdateProfileRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ShopController",
+    "Method": "EquipItem",
+    "RelativePath": "api/shop/equip",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyWebApiApp.DTOs.Item.PurchaseItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ShopController",
+    "Method": "GetUserInventory",
+    "RelativePath": "api/shop/inventory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MyWebApiApp.DTOs.UserProfile.UserProfileDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.ShopController",
@@ -180,6 +232,42 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MyWebApiApp.DTOs.Item.ItemDto, MyWebApiApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ShopController",
+    "Method": "PurchaseItem",
+    "RelativePath": "api/shop/purchase",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyWebApiApp.DTOs.Item.PurchaseItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyWebApiApp.DTOs.Item.PurchaseItemResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

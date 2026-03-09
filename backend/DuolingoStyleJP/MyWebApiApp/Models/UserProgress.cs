@@ -9,7 +9,7 @@ namespace MyWebApiApp.Models
         public int ProgressId { get; set; }
         public string UserId { get; set; } // Keep as string - proper FK to AspNetUsers
         public int LessonId { get; set; }
-        public bool Status { get; set; }
+        public bool IsCompleted { get; set; }
         public DateTime? CompletedDate { get; set; }
         public int EarnedXP { get; set; }
 

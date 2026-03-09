@@ -3,15 +3,18 @@ using MyWebApiApp.Data;
 using MyWebApiApp.DTOs.LessonContent;
 using MyWebApiApp.Interfaces;
 using MyWebApiApp.Models;
+using MyWebApiApp.Services;
 
 namespace MyWebApiApp.Repository
 {
-    public class LessonContentRepository : ILessonContentRepository
+    public class LessonAttemptRepository : ILessonAttemptRepository
     {
         private readonly ApplicationDbContext _context;
-        public LessonContentRepository(ApplicationDbContext context)
+        private readonly StreakRepository _streakRepo;
+        public LessonAttemptRepository(ApplicationDbContext context, StreakRepository streakRepo)
         {
             _context = context;
+            _streakRepo = streakRepo;
         }
 
         public async Task<CompleteLessonResponse?> CompleteLessonAsync(string userId, int attemptId)
@@ -58,7 +61,7 @@ namespace MyWebApiApp.Repository
                     {
                         UserId = userId,
                         LessonId = attempt.LessonId,
-                        Status = true,
+                        IsCompleted = true,
                         CompletedDate = DateTime.UtcNow,
                         EarnedXP = earnedXP
                     });
@@ -66,10 +69,12 @@ namespace MyWebApiApp.Repository
                 else
                 {
                     // Nếu đã có thì chỉ update (trường hợp học lại)
-                    existingProgress.Status = true;
+                    existingProgress.IsCompleted = true;
                     existingProgress.CompletedDate = DateTime.UtcNow;
                     existingProgress.EarnedXP = earnedXP;
                 }
+                await _streakRepo.UpdateStreakAsync(userId);
+
             }
 
             await _context.SaveChangesAsync();
@@ -130,7 +135,7 @@ namespace MyWebApiApp.Repository
             };
 
             _context.LessonAttempts.Add(attempt);
-            await _context.SaveChangesAsync();
+                 await _context.SaveChangesAsync();
 
             return new LessonContentDto
             {

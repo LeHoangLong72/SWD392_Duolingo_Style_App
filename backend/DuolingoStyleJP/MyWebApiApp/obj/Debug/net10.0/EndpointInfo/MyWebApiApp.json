@@ -136,10 +136,10 @@
         }
       }
     },
-    "/api/lesson-content/{lessonId}": {
+    "/api/lesson-attempt/{lessonId}": {
       "get": {
         "tags": [
-          "LessonContent"
+          "LessonAttempt"
         ],
         "parameters": [
           {
@@ -159,10 +159,10 @@
         }
       }
     },
-    "/api/lesson-content/start/{lessonId}": {
+    "/api/lesson-attempt/start/{lessonId}": {
       "post": {
         "tags": [
-          "LessonContent"
+          "LessonAttempt"
         ],
         "parameters": [
           {
@@ -182,10 +182,10 @@
         }
       }
     },
-    "/api/lesson-content/submit-answer/{attemptId}": {
+    "/api/lesson-attempt/submit-answer/{attemptId}": {
       "post": {
         "tags": [
-          "LessonContent"
+          "LessonAttempt"
         ],
         "parameters": [
           {
@@ -224,10 +224,10 @@
         }
       }
     },
-    "/api/lesson-content/complete/{attemptId}": {
+    "/api/lesson-attempt/complete/{attemptId}": {
       "post": {
         "tags": [
-          "LessonContent"
+          "LessonAttempt"
         ],
         "parameters": [
           {
@@ -247,11 +247,42 @@
         }
       }
     },
-    "/api/Profile/profile": {
+    "/api/profile/display": {
       "get": {
         "tags": [
           "Profile"
         ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/profile/modify": {
+      "put": {
+        "tags": [
+          "Profile"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProfileRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -275,7 +306,141 @@
         ],
         "responses": {
           "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItemDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/shop/purchase": {
+      "post": {
+        "tags": [
+          "Shop"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PurchaseItemResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PurchaseItemResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PurchaseItemResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/shop/equip": {
+      "post": {
+        "tags": [
+          "Shop"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseItemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
             "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/shop/inventory": {
+      "get": {
+        "tags": [
+          "Shop"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfileDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfileDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserProfileDto"
+                }
+              }
+            }
           }
         }
       }
@@ -283,6 +448,42 @@
   },
   "components": {
     "schemas": {
+      "ItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "category": {
+            "type": "string",
+            "nullable": true
+          },
+          "isPurchased": {
+            "type": "boolean"
+          },
+          "isEquipped": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "LoginDto": {
         "required": [
           "password",
@@ -297,6 +498,33 @@
           "password": {
             "minLength": 1,
             "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseItemRequest": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseItemResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "remainingGems": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -335,6 +563,49 @@
           "selectedOptionId": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateProfileRequest": {
+        "type": "object",
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "avatarUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserProfileDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "gems": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purchasedItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ItemDto"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

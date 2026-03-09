@@ -16,6 +16,8 @@ namespace MyWebApiApp.Models
         public DateTime? LastStudyDate { get; set; }
         public int StreakFreezeCount { get; set; } = 0;
 
+        public virtual ICollection<UserItem> UserItems { get; set; } = new List<UserItem>();
+
         // Navigation properties
     }
 }

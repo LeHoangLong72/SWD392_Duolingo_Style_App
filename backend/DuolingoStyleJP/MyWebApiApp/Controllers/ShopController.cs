@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyWebApiApp.Data;
 using MyWebApiApp.DTOs.Item;
-using MyWebApiApp.DTOs.Purchase;
 using MyWebApiApp.DTOs.UserItem;
+using MyWebApiApp.DTOs.UserProfile;
 using MyWebApiApp.Interfaces;
 using MyWebApiApp.Models;
 using System.Net.ServerSentEvents;
@@ -17,156 +17,86 @@ namespace MyWebApiApp.Controllers
     [ApiController]
     public class ShopController : ControllerBase
     {
-        private readonly IShopRepository _shopRepo;
-        private readonly ApplicationDbContext _context;
+        private readonly IShopRepository _shopRepository;
 
-        public ShopController(IShopRepository shopRepo, ApplicationDbContext context)
+        public ShopController(IShopRepository shopRepository)
         {
-            _shopRepo = shopRepo;
-            _context = context;
+            _shopRepository = shopRepository;
         }
 
-        [HttpGet("items")]
-        public async Task<IActionResult> GetAllItems([FromQuery] string? category)
+        private string GetUserId()
         {
-            var query = _context.Items.Where(i => i.IsActive);
-            if (!string.IsNullOrEmpty(category))
-            {
-                query = query.Where(i => i.Category.ToLower() == category.ToLower());
-            }
-            var items = await query
-                .Select(i => new ItemResponse
-                {
-                    ItemId = i.ItemId,
-                    Name = i.Name,
-                    Description = i.Description,
-                    Price = i.Price,
-                    Category = i.Category,
-                    ImageUrl = i.ImageUrl
-                })
-                .ToListAsync();
+            return User.FindFirstValue(ClaimTypes.NameIdentifier);
+        }
+
+        ///// Lấy danh sách items
+        //[HttpGet("items")]
+        //public async Task<ActionResult<List<ItemDto>>> GetItems()
+        //{
+        //    var userId = GetUserId();
+
+        //    var items = await _shopRepository.GetAllItemsAsync(userId);
+
+        //    return Ok(items);
+        //}
+
+        [HttpGet("items")]
+        public async Task<ActionResult<List<ItemDto>>> GetAllItems(string? category)
+        {
+            var items = await _shopRepository.GetAllItemsAsync(category);
             return Ok(items);
         }
 
-        //[HttpPost("purchase")]
-        //[Authorize]
-        //public async Task<IActionResult> PurchaseItem([FromBody] PurchaseRequest request)
-        //{
-        //    var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        //    if (userIdClaim == null || !int.TryParse(userIdClaim, out int userId))
-        //    {
-        //        return Unauthorized();
-        //    }
-        //    var user = await _context.Users.FindAsync(userId);
-        //    if (user == null)
-        //        return NotFound(new { message = "User not found" });
+        /// Mua item
+        [HttpPost("purchase")]
+        [Authorize]
+        public async Task<ActionResult<PurchaseItemResponse>> PurchaseItem(
+            [FromBody] PurchaseItemRequest request)
+        {
+            var userId = GetUserId();
 
-        //    var item = await _context.Items.FindAsync(request.ItemId);
-        //    if (item == null || !item.IsActive)
-        //        return NotFound(new { message = "Item not found" });
+            var response = await _shopRepository.PurchaseItemAsync(userId, request.ItemId);
 
-        //    int totalPrice = item.Price * request.Quantity;
+            if (!response.Success)
+            {
+                return BadRequest(response);
+            }
 
-        //    // Check if user has enough currency (assuming you have a Currency property on User)
-        //    // if (user.Currency < totalPrice)
-        //    //     return BadRequest(new { message = "Insufficient funds" });
+            return Ok(response);
+        }
 
-        //    // Deduct currency
-        //    // user.Currency -= totalPrice;
+        /// Equip item
+        [HttpPost("equip")]
+        [Authorize]
+        public async Task<ActionResult> EquipItem(
+            [FromBody] PurchaseItemRequest request)
+        {
+            var userId = GetUserId();
 
-        //    // Add or update user item
-        //    var existingUserItem = await _context.UserItems
-        //        .FirstOrDefaultAsync(ui => ui.UserId == userId && ui.ItemId == request.ItemId);
+            var success = await _shopRepository.EquipItemAsync(userId, request.ItemId);
 
-        //    if (existingUserItem != null)
-        //    {
-        //        existingUserItem.Quantity += request.Quantity;
-        //    }
-        //    else
-        //    {
-        //        var userItem = new UserItem
-        //        {
-        //            UserId = userId,
-        //            ItemId = request.ItemId,
-        //            Quantity = request.Quantity,
-        //            PurchasedAt = DateTime.UtcNow
-        //        };
-        //        _context.UserItems.Add(userItem);
-        //    }
+            if (!success)
+            {
+                return BadRequest(new { message = "Không thể trang bị vật phẩm" });
+            }
 
-        //    // Create transaction record
-        //    var transaction = new Transaction
-        //    {
-        //        UserId = userId,
-        //        ItemId = request.ItemId,
-        //        Quantity = request.Quantity,
-        //        TotalPrice = totalPrice,
-        //        TransactionType = "purchase",
-        //        TransactionDate = DateTime.UtcNow
-        //    };
-        //    _context.Transactions.Add(transaction);
+            return Ok(new { message = "Trang bị thành công" });
+        }
 
-        //    await _context.SaveChangesAsync();
+        /// Lấy profile
+        [HttpGet("inventory")]
+        public async Task<ActionResult<UserProfileDto>> GetUserInventory()
+        {
+            var userId = GetUserId();
 
-        //    return Ok(new
-        //    {
-        //        message = "Purchase successful",
-        //        item = item.Name,
-        //        quantity = request.Quantity,
-        //        totalPrice = totalPrice
-        //    });
-        //}
+            var profile = await _shopRepository.GetUserInventoryAsync(userId);
 
-        //// GET: api/shop/my-items
-        //[HttpGet("my-items")]
-        //[Authorize]
-        //public async Task<IActionResult> GetUserItems()
-        //{
-        //    var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        //    if (userIdClaim == null || !int.TryParse(userIdClaim, out int userId))
-        //        return Unauthorized();
+            if (profile == null)
+            {
+                return NotFound();
+            }
 
-        //    var userItems = await _context.UserItems
-        //        .Where(ui => ui.UserId == userId)
-        //        .Include(ui => ui.Item)
-        //        .Select(ui => new UserItemResponse
-        //        {
-        //            UserItemId = ui.UserItemId,
-        //            ItemId = ui.ItemId,
-        //            ItemName = ui.Item.Name,
-        //            Quantity = ui.Quantity,
-        //            PurchasedAt = ui.PurchasedAt
-        //        })
-        //        .ToListAsync();
-
-        //    return Ok(userItems);
-        //}
-
-        //// GET: api/shop/transactions
-        //[HttpGet("transactions")]
-        //[Authorize]
-        //public async Task<IActionResult> GetTransactionHistory()
-        //{
-        //    var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-        //    if (userIdClaim == null || !int.TryParse(userIdClaim, out int userId))
-        //        return Unauthorized();
-
-        //    var transactions = await _context.Transactions
-        //        .Where(t => t.UserId == userId)
-        //        .Include(t => t.Item)
-        //        .OrderByDescending(t => t.TransactionDate)
-        //        .Select(t => new
-        //        {
-        //            t.TransactionId,
-        //            ItemName = t.Item.Name,
-        //            t.Quantity,
-        //            t.TotalPrice,
-        //            t.TransactionType,
-        //            t.TransactionDate
-        //        })
-        //        .ToListAsync();
-
-        //    return Ok(transactions);
-        //}
+            return Ok(profile);
+        }
     }
 }

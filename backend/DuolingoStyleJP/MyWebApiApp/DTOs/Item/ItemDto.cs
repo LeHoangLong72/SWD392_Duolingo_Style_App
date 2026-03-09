@@ -1,12 +1,14 @@
 ﻿namespace MyWebApiApp.DTOs.Item
 {
-    public class ItemResponse
+    public class ItemDto
     {
-        public int ItemId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int Price { get; set; }
+        public string ImageUrl { get; set; } = string.Empty;
         public string Category { get; set; } = string.Empty;
-        public string ImageUrl { get; set; }
+        public bool IsPurchased { get; set; }
+        public bool IsEquipped { get; set; }
     }
 }

@@ -22,6 +22,7 @@ namespace MyWebApiApp.Data
         public DbSet<QuestionOption> QuestionOptions { get; set; }
         public DbSet<LessonAttempt> LessonAttempts { get; set; }
         public DbSet<UserAnswer> UserAnswers { get; set; }
+        public DbSet<VwPopularItem> VwPopularItems { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

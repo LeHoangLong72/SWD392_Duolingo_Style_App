@@ -5,11 +5,11 @@ namespace MyWebApiApp.Mappers
 {
     public static class ItemMappers
     {
-        public static ItemResponse ToItemResponse(this Item itemModel)
+        public static ItemDto ToItemResponse(this Item itemModel)
         {
-            return new ItemResponse
+            return new ItemDto
             {
-                ItemId = itemModel.ItemId,
+                Id = itemModel.ItemId,
                 Name = itemModel.Name,
                 Description = itemModel.Description,
                 Price = itemModel.Price,

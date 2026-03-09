@@ -1,23 +1,54 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyWebApiApp.DTOs.Profile;
+using MyWebApiApp.Interfaces;
+using System.Security.Claims;
 
 namespace MyWebApiApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/profile")]
     [ApiController]
+    [Authorize]
     public class ProfileController : ControllerBase
     {
-        [HttpGet("profile")]
-        public IActionResult GetProfile()
+        private readonly IProfileRepository _profileRepo;
+        public ProfileController(IProfileRepository profileRepo)
         {
-            if (User.Identity != null && User.Identity.IsAuthenticated)
-            {
-                return Ok("User đã đăng nhập");
-            }
-            else
-            {
-                return Unauthorized("Chưa đăng nhập");
-            }
+            _profileRepo = profileRepo;
+        }
+
+        private string GetUserId()
+        {
+            return User.FindFirstValue(ClaimTypes.NameIdentifier);
+        }
+
+        [HttpGet("display")]
+        public async Task<IActionResult> GetProfile()
+        {
+            var userId = GetUserId();
+
+            var profile = await _profileRepo.GetProfileAsync(userId);
+
+            if (profile == null)
+                return NotFound();
+
+            return Ok(profile);
+        }
+
+        [HttpPut("modify")]
+        public async Task<IActionResult> UpdateProfile(UpdateProfileRequest request)
+        {
+            var userId = GetUserId();
+
+            var profile = await _profileRepo.UpdateProfileAsync(userId, request);
+
+            if (profile == null)
+                return NotFound();
+
+            return Ok(profile);
         }
     }
 }

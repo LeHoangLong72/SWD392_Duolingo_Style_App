@@ -3,200 +3,64 @@
   "WorkspaceRootPath": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\lessoncontentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\lessoncontentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\lessonattemptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\lessonattemptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\lessonattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\lessonattempt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\useranswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\useranswer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\lesson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\questionoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\questionoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\lessoncontentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\lessoncontentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\interfaces\\ilearningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\interfaces\\ilearningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\lessonattemptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\lessonattemptrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\userprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\interfaces\\ilessoncontentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\interfaces\\ilessoncontentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\completelessonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\completelessonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\submitanswerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\submitanswerresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\submitanswerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\submitanswerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\questiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\lessoncontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\lessoncontentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\lessoncontent\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\lessoncontent\\optiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\learningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\learningrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\learningcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\alphabet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\alphabet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\alphabetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\alphabetrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\alphabetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\alphabetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\useritem\\useritemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\useritem\\useritemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\shoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\shoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\mastersetup.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\mastersetup.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\interfaces\\ishoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\interfaces\\ishoprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\seedshopitems.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\seedshopitems.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\repository\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\repository\\profilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\seedalldata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\seedalldata.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\profile\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\profile\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\insertsimple.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\insertsimple.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\profile\\profileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\profile\\profileresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\insertsimplewithuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\insertsimplewithuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\interfaces\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\interfaces\\iprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\getuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\getuserid.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\vwpopularitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\vwpopularitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\seedlessoncontent.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\seedlessoncontent.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\dtos\\item\\purchaseitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\dtos\\item\\purchaseitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\createlessoncontenttables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\createlessoncontenttables.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Migrations\\20260226011452_Function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyWebApiApp\\Migrations\\20260226011452_Function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\extensions\\claimsextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\tests\\lessoncontent.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\tests\\lessoncontent.postman_collection.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\scripts\\userid_explained.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\scripts\\userid_explained.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\migrations\\20260226011545_addfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\migrations\\20260226011545_addfunction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|e:\\coding\\code\\c_sharp\\swd392_duolingo_style_app\\backend\\duolingostylejp\\mywebapiapp\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{931AFB0D-1365-A8C3-185F-D3CB3D69D5C3}|MyWebApiApp\\MyWebApiApp.csproj|solutionrelative:mywebapiapp\\models\\useritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -223,600 +87,197 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LessonContentRepository.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LessonContentRepository.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\LessonContentRepository.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LessonContentRepository.cs",
-              "RelativeToolTip": "MyWebApiApp\\Repository\\LessonContentRepository.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAjwIQAAAAMAAAAAAAAAA==",
+              "Title": "LessonAttemptController.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LessonAttemptController.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\LessonAttemptController.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LessonAttemptController.cs",
+              "RelativeToolTip": "MyWebApiApp\\Controllers\\LessonAttemptController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:47:46.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuestionOption.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\QuestionOption.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\QuestionOption.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\QuestionOption.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\QuestionOption.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:00:38.326Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\AccountController.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "MyWebApiApp\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAtwCAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:51:21.695Z",
+              "WhenOpened": "2026-03-09T00:59:20.708Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LessonAttempt.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\LessonAttempt.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\LessonAttempt.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\LessonAttempt.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\LessonAttempt.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Title": "LessonAttemptRepository.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LessonAttemptRepository.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\LessonAttemptRepository.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LessonAttemptRepository.cs",
+              "RelativeToolTip": "MyWebApiApp\\Repository\\LessonAttemptRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:54:23.555Z",
+              "WhenOpened": "2026-03-09T00:59:17.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UserAnswer.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserAnswer.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\UserAnswer.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserAnswer.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\UserAnswer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:54:54.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Lesson.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Lesson.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Lesson.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Lesson.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Lesson.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:16:15.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ILearningRepository.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ILearningRepository.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Interfaces\\ILearningRepository.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ILearningRepository.cs",
-              "RelativeToolTip": "MyWebApiApp\\Interfaces\\ILearningRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:13:59.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LessonContentController.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LessonContentController.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\LessonContentController.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LessonContentController.cs",
-              "RelativeToolTip": "MyWebApiApp\\Controllers\\LessonContentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwDwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:27:03.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Program.cs",
               "RelativeDocumentMoniker": "MyWebApiApp\\Program.cs",
               "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Program.cs",
               "RelativeToolTip": "MyWebApiApp\\Program.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAGYAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAgwGcAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:27:25.266Z",
+              "WhenOpened": "2026-03-09T01:35:31.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "MyWebApiApp\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBcAAAA6AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "UpdateProfileRequest.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Profile\\UpdateProfileRequest.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\Profile\\UpdateProfileRequest.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Profile\\UpdateProfileRequest.cs",
+              "RelativeToolTip": "MyWebApiApp\\DTOs\\Profile\\UpdateProfileRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-03T11:52:31.27Z",
+              "WhenOpened": "2026-03-09T01:14:29.174Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserProgress.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserProgress.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\UserProgress.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserProgress.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\UserProgress.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:26:16.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ILessonContentRepository.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ILessonContentRepository.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Interfaces\\ILessonContentRepository.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ILessonContentRepository.cs",
-              "RelativeToolTip": "MyWebApiApp\\Interfaces\\ILessonContentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:26:28.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CompleteLessonResponse.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\CompleteLessonResponse.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\CompleteLessonResponse.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\CompleteLessonResponse.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\CompleteLessonResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:46:38.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SubmitAnswerResponse.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerResponse.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerResponse.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerResponse.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:46:07.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SubmitAnswerRequest.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerRequest.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerRequest.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerRequest.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\SubmitAnswerRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:45:38.527Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "OptionDto.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\OptionDto.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\OptionDto.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\OptionDto.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\OptionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:44:51.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "QuestionDto.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\QuestionDto.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\QuestionDto.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\QuestionDto.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\QuestionDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:44:11.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LessonContentDto.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\LessonContentDto.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\LessonContent\\LessonContentDto.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\LessonContent\\LessonContentDto.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\LessonContent\\LessonContentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T02:43:33.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LearningController.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LearningController.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\LearningController.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\LearningController.cs",
-              "RelativeToolTip": "MyWebApiApp\\Controllers\\LearningController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA2wCcAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:07:44.083Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LearningRepository.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LearningRepository.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\LearningRepository.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\LearningRepository.cs",
-              "RelativeToolTip": "MyWebApiApp\\Repository\\LearningRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:09:43.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "TokenService.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Services\\TokenService.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Services\\TokenService.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Services\\TokenService.cs",
-              "RelativeToolTip": "MyWebApiApp\\Services\\TokenService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAkwCQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:39:59.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Question.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Question.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Question.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Question.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Question.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-02T01:59:59.265Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ITokenService.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ITokenService.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Interfaces\\ITokenService.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\ITokenService.cs",
-              "RelativeToolTip": "MyWebApiApp\\Interfaces\\ITokenService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:58:41.639Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\AppUser.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\AppUser.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:16:07.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Topic.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Topic.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Topic.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Topic.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Topic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:35:01.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Items.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Items.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Items.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Items.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Items.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T00:47:25.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "UserItem.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserItem.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\UserItem.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserItem.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\UserItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:57:18.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "UserProfile.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserProfile.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\UserProfile.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserProfile.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\UserProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:36:33.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Level.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Level.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Level.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Level.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Level.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:36:07.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Alphabet.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Alphabet.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\Alphabet.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\Alphabet.cs",
-              "RelativeToolTip": "MyWebApiApp\\Models\\Alphabet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T12:34:15.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "SeedAllData.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedAllData.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\SeedAllData.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedAllData.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\SeedAllData.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:42:57.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AlphabetRepository.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\AlphabetRepository.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\AlphabetRepository.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\AlphabetRepository.cs",
-              "RelativeToolTip": "MyWebApiApp\\Repository\\AlphabetRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:49:21.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 3,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\ProfileController.cs",
               "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\ProfileController.cs",
               "RelativeToolTip": "MyWebApiApp\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:57:41.325Z"
+              "WhenOpened": "2026-03-09T01:27:15.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "AlphabetController.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\AlphabetController.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\AlphabetController.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\AlphabetController.cs",
-              "RelativeToolTip": "MyWebApiApp\\Controllers\\AlphabetController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:47:37.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "SeedLessonContent.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedLessonContent.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\SeedLessonContent.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedLessonContent.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\SeedLessonContent.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:34:09.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 4,
               "Title": "ShopController.cs",
               "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\ShopController.cs",
               "RelativeDocumentMoniker": "MyWebApiApp\\Controllers\\ShopController.cs",
               "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Controllers\\ShopController.cs",
               "RelativeToolTip": "MyWebApiApp\\Controllers\\ShopController.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwBsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwFsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T00:58:00.102Z"
+              "WhenOpened": "2026-03-07T03:28:09.623Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "InsertSimple.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\InsertSimple.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\InsertSimple.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\InsertSimple.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\InsertSimple.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:51:15.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "UserItemResponse.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\UserItem\\UserItemResponse.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\UserItem\\UserItemResponse.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\UserItem\\UserItemResponse.cs",
-              "RelativeToolTip": "MyWebApiApp\\DTOs\\UserItem\\UserItemResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "IShopRepository.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\IShopRepository.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Interfaces\\IShopRepository.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\IShopRepository.cs",
+              "RelativeToolTip": "MyWebApiApp\\Interfaces\\IShopRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:25:54.426Z"
+              "WhenOpened": "2026-03-09T01:31:08.815Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "README.md",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\README.md",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\README.md",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\README.md",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\README.md",
-              "ViewState": "AgIAACYAAAAAAAAAAABBwOMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-02-26T01:43:45.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "USERID_EXPLAINED.md",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\USERID_EXPLAINED.md",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\USERID_EXPLAINED.md",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\USERID_EXPLAINED.md",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\USERID_EXPLAINED.md",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-02-26T01:59:00.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "InsertSimpleWithUserId.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\InsertSimpleWithUserId.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\InsertSimpleWithUserId.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\InsertSimpleWithUserId.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\InsertSimpleWithUserId.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:58:08.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "GetUserId.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\GetUserId.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\GetUserId.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\GetUserId.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\GetUserId.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:58:09.157Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "MasterSetup.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\MasterSetup.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\MasterSetup.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\MasterSetup.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\MasterSetup.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:44:25.668Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "SeedShopItems.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedShopItems.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\SeedShopItems.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\SeedShopItems.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\SeedShopItems.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:43:18.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "LessonContent.postman_collection.json",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Tests\\LessonContent.postman_collection.json",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Tests\\LessonContent.postman_collection.json",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Tests\\LessonContent.postman_collection.json",
-              "RelativeToolTip": "MyWebApiApp\\Tests\\LessonContent.postman_collection.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-26T01:34:32.077Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "CreateLessonContentTables.sql",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\CreateLessonContentTables.sql",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Scripts\\CreateLessonContentTables.sql",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Scripts\\CreateLessonContentTables.sql",
-              "RelativeToolTip": "MyWebApiApp\\Scripts\\CreateLessonContentTables.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-02-26T01:33:52.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ClaimsExtensions.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Extensions\\ClaimsExtensions.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Extensions\\ClaimsExtensions.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Extensions\\ClaimsExtensions.cs",
-              "RelativeToolTip": "MyWebApiApp\\Extensions\\ClaimsExtensions.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ShopRepository.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\ShopRepository.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\ShopRepository.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\ShopRepository.cs",
+              "RelativeToolTip": "MyWebApiApp\\Repository\\ShopRepository.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAjwEUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:27:12.788Z"
+              "WhenOpened": "2026-03-07T02:55:27.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "20260226011545_AddFunction.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Migrations\\20260226011545_AddFunction.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Migrations\\20260226011545_AddFunction.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Migrations\\20260226011545_AddFunction.cs",
-              "RelativeToolTip": "MyWebApiApp\\Migrations\\20260226011545_AddFunction.cs",
+              "DocumentIndex": 7,
+              "Title": "ProfileRepository.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\ProfileRepository.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Repository\\ProfileRepository.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Repository\\ProfileRepository.cs",
+              "RelativeToolTip": "MyWebApiApp\\Repository\\ProfileRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:14:55.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProfileResponse.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Profile\\ProfileResponse.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\Profile\\ProfileResponse.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Profile\\ProfileResponse.cs",
+              "RelativeToolTip": "MyWebApiApp\\DTOs\\Profile\\ProfileResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:14:25.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IProfileRepository.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\IProfileRepository.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Interfaces\\IProfileRepository.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Interfaces\\IProfileRepository.cs",
+              "RelativeToolTip": "MyWebApiApp\\Interfaces\\IProfileRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:13:36.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VwPopularItem.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\VwPopularItem.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\VwPopularItem.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\VwPopularItem.cs",
+              "RelativeToolTip": "MyWebApiApp\\Models\\VwPopularItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T01:12:21.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PurchaseItemRequest.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Item\\PurchaseItemRequest.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\DTOs\\Item\\PurchaseItemRequest.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\DTOs\\Item\\PurchaseItemRequest.cs",
+              "RelativeToolTip": "MyWebApiApp\\DTOs\\Item\\PurchaseItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-09T00:59:06.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserItem.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserItem.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\UserItem.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\UserItem.cs",
+              "RelativeToolTip": "MyWebApiApp\\Models\\UserItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T03:58:57.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\AppUser.cs",
+              "RelativeDocumentMoniker": "MyWebApiApp\\Models\\AppUser.cs",
+              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Models\\AppUser.cs",
+              "RelativeToolTip": "MyWebApiApp\\Models\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:15:45.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "20260226011452_Function.cs",
-              "DocumentMoniker": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Migrations\\20260226011452_Function.cs",
-              "RelativeDocumentMoniker": "MyWebApiApp\\Migrations\\20260226011452_Function.cs",
-              "ToolTip": "E:\\Coding\\Code\\C_sharp\\SWD392_Duolingo_Style_App\\backend\\DuolingoStyleJP\\MyWebApiApp\\Migrations\\20260226011452_Function.cs",
-              "RelativeToolTip": "MyWebApiApp\\Migrations\\20260226011452_Function.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-26T01:14:52.811Z"
+              "WhenOpened": "2026-03-09T00:49:42.586Z",
+              "EditorCaption": ""
             }
           ]
         }
