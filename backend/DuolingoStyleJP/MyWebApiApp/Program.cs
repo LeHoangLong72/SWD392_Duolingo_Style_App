@@ -103,6 +103,7 @@ namespace MyWebApiApp
             builder.Services.AddScoped<ILessonAttemptRepository, LessonAttemptRepository>();
             builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
             builder.Services.AddScoped<IStreakRepository, StreakRepository>();
+            builder.Services.AddScoped<IHeartRepository, HeartRepository>();
 
             var app = builder.Build();
 

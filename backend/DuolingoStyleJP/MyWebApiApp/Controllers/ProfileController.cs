@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyWebApiApp.DTOs.Profile;
 using MyWebApiApp.Interfaces;
+using MyWebApiApp.Repository;
 using System.Security.Claims;
 
 namespace MyWebApiApp.Controllers
@@ -49,6 +50,19 @@ namespace MyWebApiApp.Controllers
                 return NotFound();
 
             return Ok(profile);
+        }
+
+        [HttpGet("summary/{userId}")]
+        public async Task<ActionResult<UserSummaryDto>> GetUserSummary(string userId)
+        {
+            var summary = await _profileRepo.GetUserSummaryAsync(userId);
+
+            if (summary == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(summary);
         }
     }
 }

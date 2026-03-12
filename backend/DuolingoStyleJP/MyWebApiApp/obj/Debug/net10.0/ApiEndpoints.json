@@ -32,6 +32,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyWebApiApp.Controllers.AchievementController",
+    "Method": "GetAchievements",
+    "RelativePath": "api/achievements",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AchievementController",
+    "Method": "ClaimAchievement",
+    "RelativePath": "api/achievements/{achievementId}/claim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "achievementId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.AchievementController",
+    "Method": "ClaimAchievement",
+    "RelativePath": "api/achievements/claim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyWebApiApp.Controllers.AlphabetController",
     "Method": "GetHiragana",
     "RelativePath": "api/alphabets/hiragana",
@@ -68,9 +104,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyWebApiApp.Controllers.HeartsController",
+    "Method": "GetHearts",
+    "RelativePath": "api/hearts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.HeartsController",
+    "Method": "PracticeForHeart",
+    "RelativePath": "api/hearts/practice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.HeartsController",
+    "Method": "RefillHearts",
+    "RelativePath": "api/hearts/refill",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LeaderboardController",
+    "Method": "GetLeaderboard",
+    "RelativePath": "api/leaderboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LeaderboardController",
+    "Method": "GetUserRank",
+    "RelativePath": "api/leaderboard/my-rank/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LeaderboardController",
+    "Method": "GetWeeklyLeaderboard",
+    "RelativePath": "api/leaderboard/weekly",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MyWebApiApp.Controllers.LearningController",
     "Method": "GetPath",
     "RelativePath": "api/learning/japanese-path",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "Method": "GetMistakes",
+    "RelativePath": "api/learning/mistakes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -183,6 +295,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MyWebApiApp.Controllers.ProfileController",
+    "Method": "GetUserSummary",
+    "RelativePath": "api/profile/summary/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MyWebApiApp.DTOs.Profile.UserSummaryDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MyWebApiApp.Controllers.ShopController",
     "Method": "EquipItem",
     "RelativePath": "api/shop/equip",
@@ -269,5 +407,35 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.StatsController",
+    "Method": "GetAchievements",
+    "RelativePath": "api/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.StatsController",
+    "Method": "ClaimAchievement",
+    "RelativePath": "api/stats/claim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.StreakController",
+    "Method": "GetStreak",
+    "RelativePath": "api/streak",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

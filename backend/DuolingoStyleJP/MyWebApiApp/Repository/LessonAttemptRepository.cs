@@ -10,11 +10,13 @@ namespace MyWebApiApp.Repository
     public class LessonAttemptRepository : ILessonAttemptRepository
     {
         private readonly ApplicationDbContext _context;
-        private readonly StreakRepository _streakRepo;
-        public LessonAttemptRepository(ApplicationDbContext context, StreakRepository streakRepo)
+        private readonly IStreakRepository _streakRepo;
+        private readonly IHeartRepository _heartRepo;
+        public LessonAttemptRepository(ApplicationDbContext context, IStreakRepository streakRepo, IHeartRepository heartRepo)
         {
             _context = context;
             _streakRepo = streakRepo;
+            _heartRepo = heartRepo;
         }
 
         public async Task<CompleteLessonResponse?> CompleteLessonAsync(string userId, int attemptId)
@@ -181,7 +183,18 @@ namespace MyWebApiApp.Repository
             };
 
             if (option.IsCorrect)
+            {
                 attempt.CorrectAnswers++;
+            }
+            else
+            {
+                var heartRemaining = await _heartRepo.LoseHeartAsync(userId);
+                if (!heartRemaining)
+                {
+                    throw new Exception("No hearts remaining");
+                }
+            }
+
 
             _context.UserAnswers.Add(userAnswer);
             await _context.SaveChangesAsync();

@@ -129,6 +129,17 @@ namespace MyWebApiApp.Controllers
 
 
         }
+
+        [HttpGet("mistakes")]
+        public IActionResult GetMistakes()
+        {
+            // TODO: get user's wrong answers
+
+            return Ok(new
+            {
+                message = "Mistake review endpoint created"
+            });
+        }
     }
 
 }

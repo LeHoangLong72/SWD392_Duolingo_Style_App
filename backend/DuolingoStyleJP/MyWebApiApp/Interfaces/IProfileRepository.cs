@@ -9,5 +9,6 @@ namespace MyWebApiApp.Interfaces
         //Task<ProfileResponse?> GetUserProfileAsync(string userId);
         //Task<List<ProfileResponse>> GetAllProfilesAsync();
         //Task<bool> DeleteProfileAsync(string userId);
+        Task<UserSummaryDto?> GetUserSummaryAsync(string userId);
     }
 }

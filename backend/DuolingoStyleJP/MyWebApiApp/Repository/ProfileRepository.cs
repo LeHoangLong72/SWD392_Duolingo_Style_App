@@ -31,10 +31,22 @@ namespace MyWebApiApp.Repository
                 CurrentXP = user.CurrentXP,
                 TotalXP = user.TotalXP,
                 Gems = user.Gems,
-                Hearts = user.Hearts,
+                Hearts = user.CurrentHearts,
                 MaxHearts = user.MaxHearts,
                 CurrentStreak = user.CurrentStreak,
                 LongestStreak = user.LongestStreak
+            };
+        }
+
+        public async Task<UserSummaryDto?> GetUserSummaryAsync(string userId)
+        {
+            return new UserSummaryDto
+            {
+                UserName = "DemoUser",
+                TotalXP = 0,
+                CurrentStreak = 0,
+                CurrentHearts = 5,
+                LessonsCompleted = 0
             };
         }
 
@@ -62,7 +74,7 @@ namespace MyWebApiApp.Repository
                 CurrentXP = user.CurrentXP,
                 TotalXP = user.TotalXP,
                 Gems = user.Gems,
-                Hearts = user.Hearts,
+                Hearts = user.CurrentHearts,
                 MaxHearts = user.MaxHearts,
                 CurrentStreak = user.CurrentStreak,
                 LongestStreak = user.LongestStreak

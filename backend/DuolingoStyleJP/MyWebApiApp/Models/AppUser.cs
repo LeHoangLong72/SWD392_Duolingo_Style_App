@@ -7,7 +7,7 @@ namespace MyWebApiApp.Models
         public int CurrentXP { get; set; } = 0;
         public int TotalXP { get; set; } = 0;
         public int Level { get; set; } = 1;
-        public int Hearts { get; set; } = 5;
+        public int CurrentHearts { get; set; } = 5;
         public int MaxHearts { get; set; } = 5;
         public DateTime? LastHeartRefillTime { get; set; }
         public int Gems { get; set; } = 0;
