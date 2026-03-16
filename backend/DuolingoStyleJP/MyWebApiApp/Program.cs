@@ -104,6 +104,9 @@ namespace MyWebApiApp
             builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
             builder.Services.AddScoped<IStreakRepository, StreakRepository>();
             builder.Services.AddScoped<IHeartRepository, HeartRepository>();
+            builder.Services.AddScoped<IAchievementRepository, AchievementRepository>();
+            builder.Services.AddScoped<IAchievementService, AchievementService>();
+            builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
             var app = builder.Build();
 

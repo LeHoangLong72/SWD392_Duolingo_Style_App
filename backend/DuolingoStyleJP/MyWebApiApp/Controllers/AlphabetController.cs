@@ -25,18 +25,6 @@ namespace MyWebApiApp.Controllers
         [HttpGet("hiragana")]
         public async Task<IActionResult> GetHiragana()
         {
-            //var hiraganaAlphabets = await _context.Alphabets
-            //    .Where(a => a.Type.ToLower() == "hiragana")
-            //    .Select(s => new AlphabetResponse
-            //    {
-            //        AlphabetId = s.AlphabetId,
-            //        Character = s.Character,
-            //        Type = s.Type,
-            //        Level = s.Level,
-            //        Meaning = s.Meaning
-            //    })
-            //    .ToListAsync();
-
             var hiraganaAlphabets = await _alphabetRepo.GetAllHiraganaAsync();
             return Ok(hiraganaAlphabets);
         }

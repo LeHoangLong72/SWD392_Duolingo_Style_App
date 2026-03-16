@@ -23,6 +23,10 @@ namespace MyWebApiApp.Data
         public DbSet<LessonAttempt> LessonAttempts { get; set; }
         public DbSet<UserAnswer> UserAnswers { get; set; }
         public DbSet<VwPopularItem> VwPopularItems { get; set; }
+        public DbSet<Achievement> Achievements { get; set; }
+        public DbSet<UserAchievement> UserAchievements { get; set; }
+        public DbSet<TaskItem> Tasks { get; set; }
+        public DbSet<UserTask> UserTasks { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

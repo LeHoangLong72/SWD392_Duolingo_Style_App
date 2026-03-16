@@ -79,18 +79,6 @@
         }
       }
     },
-    "/api/achievements/claim": {
-      "post": {
-        "tags": [
-          "Achievement"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/achievements/{achievementId}/claim": {
       "post": {
         "tags": [
@@ -241,10 +229,10 @@
         }
       }
     },
-    "/api/learning/japanese-path": {
+    "/api/learning-path/japanese-path": {
       "get": {
         "tags": [
-          "Learning"
+          "LearningPath"
         ],
         "responses": {
           "200": {
@@ -253,10 +241,10 @@
         }
       }
     },
-    "/api/learning/my-progress": {
+    "/api/learning-path/my-progress": {
       "get": {
         "tags": [
-          "Learning"
+          "LearningPath"
         ],
         "responses": {
           "200": {
@@ -265,10 +253,10 @@
         }
       }
     },
-    "/api/learning/mistakes": {
+    "/api/learning-path/mistakes": {
       "get": {
         "tags": [
-          "Learning"
+          "LearningPath"
         ],
         "responses": {
           "200": {
@@ -625,34 +613,57 @@
         }
       }
     },
-    "/api/stats": {
-      "get": {
-        "tags": [
-          "Stats"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/stats/claim": {
-      "post": {
-        "tags": [
-          "Stats"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/streak": {
       "get": {
         "tags": [
           "Streak"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/tasks/daily": {
+      "get": {
+        "tags": [
+          "Task"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/tasks/{taskId}/claim": {
+      "post": {
+        "tags": [
+          "Task"
+        ],
+        "parameters": [
+          {
+            "name": "taskId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/tasks/progress": {
+      "get": {
+        "tags": [
+          "Task"
         ],
         "responses": {
           "200": {

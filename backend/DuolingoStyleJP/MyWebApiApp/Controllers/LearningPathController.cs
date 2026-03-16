@@ -9,16 +9,21 @@ using System.Security.Claims;
 
 namespace MyWebApiApp.Controllers
 {
-    [Route("api/learning")]
+    [Route("api/learning-path")]
     [ApiController]
-    public class LearningController : ControllerBase
+    public class LearningPathController : ControllerBase
     {
-        //private readonly ILearningRepository _learningService;
+        private readonly ApplicationDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
 
-        //public LearningController(ILearningRepository learningService)
-        //{
-        //    _learningService = learningService;
-        //}
+        public LearningPathController(
+            ApplicationDbContext context,
+            UserManager<AppUser> userManager)
+        {
+            _context = context;
+            _userManager = userManager;
+        }
+
 
         [HttpGet("japanese-path")]
         public async Task<IActionResult> GetPath()
@@ -30,7 +35,6 @@ namespace MyWebApiApp.Controllers
             {
                 return Unauthorized("Token không hợp lệ");
             }
-
             // 2️⃣ Lấy toàn bộ Lesson
             var lessons = await _context.Lessons
                 .OrderBy(l => l.LessonId)
@@ -56,49 +60,11 @@ namespace MyWebApiApp.Controllers
             return Ok(result);
         }
         
-
-        //// Endpoint gọi khi hoàn thành 1 Lesson
-        //[HttpPost("complete-lesson/{lessonId}")]
-        //public async Task<IActionResult> CompleteLesson(int lessonId)
-        //{
-        //    var userId = int.Parse(User.FindFirst("UserID")?.Value ?? "1");
-        //    await _learningService.UpdateProgressAsync(userId, lessonId);
-        //    return Ok(new { message = "Progress updated successfully" });
-        //}
-        private readonly ApplicationDbContext _context;
-        private readonly UserManager<AppUser> _userManager;
-
-        public LearningController(
-            ApplicationDbContext context,
-            UserManager<AppUser> userManager)
-        {
-            _context = context;
-            _userManager = userManager;
-        }
+        
 
         [HttpGet("my-progress")]
         public async Task<IActionResult> GetMyProgress()
         {
-            //// Lấy UserId từ JWT
-            //var userId = _userManager.GetUserId(User);
-
-            //if(User.Identity != null && User.Identity.IsAuthenticated)
-            //{
-            //    var progress = await _context.UserProgress
-            //    .Where(p => p.UserId == userId)
-            //    .Include(p => p.Lesson)
-            //    .Select(p => new
-            //    {
-            //        p.LessonId,
-            //        LessonName = p.Lesson.LessonName,
-            //    })
-            //    .ToListAsync();
-            //    return Ok(progress);
-            //}
-            //else
-            //{
-            //    return Unauthorized("Không có dữ liệu tiến độ vì người dùng chưa đăng nhập");
-            //}
             // Nếu chưa đăng nhập
             if (User?.Identity == null || !User.Identity.IsAuthenticated)
             {

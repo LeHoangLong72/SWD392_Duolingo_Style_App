@@ -58,16 +58,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.AchievementController",
-    "Method": "ClaimAchievement",
-    "RelativePath": "api/achievements/claim",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "MyWebApiApp.Controllers.AlphabetController",
     "Method": "GetHiragana",
     "RelativePath": "api/alphabets/hiragana",
@@ -170,9 +160,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "ContainingType": "MyWebApiApp.Controllers.LearningPathController",
     "Method": "GetPath",
-    "RelativePath": "api/learning/japanese-path",
+    "RelativePath": "api/learning-path/japanese-path",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -180,9 +170,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "ContainingType": "MyWebApiApp.Controllers.LearningPathController",
     "Method": "GetMistakes",
-    "RelativePath": "api/learning/mistakes",
+    "RelativePath": "api/learning-path/mistakes",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -190,9 +180,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.LearningController",
+    "ContainingType": "MyWebApiApp.Controllers.LearningPathController",
     "Method": "GetMyProgress",
-    "RelativePath": "api/learning/my-progress",
+    "RelativePath": "api/learning-path/my-progress",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -409,9 +399,9 @@
     ]
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.StatsController",
-    "Method": "GetAchievements",
-    "RelativePath": "api/stats",
+    "ContainingType": "MyWebApiApp.Controllers.StreakController",
+    "Method": "GetStreak",
+    "RelativePath": "api/streak",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -419,19 +409,35 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.StatsController",
-    "Method": "ClaimAchievement",
-    "RelativePath": "api/stats/claim",
+    "ContainingType": "MyWebApiApp.Controllers.TaskController",
+    "Method": "ClaimTaskReward",
+    "RelativePath": "api/tasks/{taskId}/claim",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "taskId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.TaskController",
+    "Method": "GetDailyTasks",
+    "RelativePath": "api/tasks/daily",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.StreakController",
-    "Method": "GetStreak",
-    "RelativePath": "api/streak",
+    "ContainingType": "MyWebApiApp.Controllers.TaskController",
+    "Method": "GetTaskProgress",
+    "RelativePath": "api/tasks/progress",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

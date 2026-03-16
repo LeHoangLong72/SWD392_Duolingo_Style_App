@@ -1,51 +1,69 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyWebApiApp.Interfaces;
+using MyWebApiApp.Repository;
+using System.Security.Claims;
 
 namespace MyWebApiApp.Controllers
 {
     [Route("api/achievements")]
     [ApiController]
+    [Authorize]
     public class AchievementController : ControllerBase
     {
-        /// <summary>
-        /// Lấy danh sách achievement của user
-        /// </summary>
-        [HttpGet]
-        public IActionResult GetAchievements()
-        {
-            // TODO: implement logic
+        private readonly IAchievementRepository _achievementRepo;
 
-            return Ok(new
-            {
-                message = "Get achievements endpoint created"
-            });
+        public AchievementController(IAchievementRepository achievementRepo)
+        {
+            _achievementRepo = achievementRepo;
         }
 
-        /// <summary>
-        /// Claim achievement
-        /// </summary>
-        [HttpPost("claim")]
-        public IActionResult ClaimAchievement()
+        [HttpGet]
+        public async Task<IActionResult> GetAchievements()
         {
-            // TODO: implement logic
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return Ok(new
+            var achievements = await _achievementRepo.GetAllAchievementsAsync();
+            var userAchievements = await _achievementRepo.GetUserAchievementsAsync(userId);
+
+            var result = achievements.Select(a => new
             {
-                message = "Claim achievement endpoint created"
+                a.AchievementId,
+                a.Name,
+                a.Description,
+                a.IconUrl,
+                a.RequiredValue,
+                a.AchievementType,
+                unlocked = userAchievements.Any(ua => ua.AchievementId == a.AchievementId)
             });
+
+            return Ok(result);
         }
 
         [HttpPost("{achievementId}/claim")]
         public async Task<IActionResult> ClaimAchievement(int achievementId)
         {
-            // TODO: implement claim logic
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var userAchievement = await _achievementRepo
+                .GetUserAchievementAsync(userId, achievementId);
+
+            if (userAchievement == null)
+            {
+                return BadRequest("Achievement not unlocked");
+            }
+
+            // TODO: add reward logic
+            int rewardXP = 50;
+            int rewardGems = 10;
 
             return Ok(new
             {
                 success = true,
                 message = "Achievement reward claimed",
-                rewardXP = 50,
-                rewardGems = 10
+                rewardXP,
+                rewardGems
             });
         }
     }

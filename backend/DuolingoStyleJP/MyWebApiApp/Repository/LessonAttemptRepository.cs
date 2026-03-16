@@ -12,11 +12,17 @@ namespace MyWebApiApp.Repository
         private readonly ApplicationDbContext _context;
         private readonly IStreakRepository _streakRepo;
         private readonly IHeartRepository _heartRepo;
-        public LessonAttemptRepository(ApplicationDbContext context, IStreakRepository streakRepo, IHeartRepository heartRepo)
+        private readonly IAchievementService _achievementService;
+        public LessonAttemptRepository(
+            ApplicationDbContext context, 
+            IStreakRepository streakRepo, 
+            IHeartRepository heartRepo,
+            IAchievementService achievementService)
         {
             _context = context;
             _streakRepo = streakRepo;
             _heartRepo = heartRepo;
+            _achievementService = achievementService;
         }
 
         public async Task<CompleteLessonResponse?> CompleteLessonAsync(string userId, int attemptId)
@@ -80,6 +86,7 @@ namespace MyWebApiApp.Repository
             }
 
             await _context.SaveChangesAsync();
+            await _achievementService.CheckLessonAchievementsAsync(userId);
 
             return new CompleteLessonResponse
             {
