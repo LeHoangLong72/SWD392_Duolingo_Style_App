@@ -9,6 +9,10 @@
         public DateTime PurchasedAt { get; set; } = DateTime.Now;
         public bool IsEquipped { get; set; }
 
+        public DateTime? ActivatedAt { get; set; }
+        public DateTime? ExpiredAt { get; set; }
+        public bool IsConsumed { get; set; } = false;
+
         public AppUser User { get; set; } = null!;
         public Item Item { get; set; } = null!;
     }

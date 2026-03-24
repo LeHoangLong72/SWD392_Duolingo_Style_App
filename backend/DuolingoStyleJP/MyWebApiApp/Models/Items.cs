@@ -15,5 +15,7 @@ namespace MyWebApiApp.Models
         public string ImageUrl { get; set; }
         public bool IsActive { get; set; } = true;
 
+        public int? DurationMinutes { get; set; }
+        public bool IsConsumable { get; set; } = false;
     }
 }

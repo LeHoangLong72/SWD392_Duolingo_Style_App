@@ -45,13 +45,18 @@ namespace MyWebApiApp.Repository
             }
             else
             {
-                var diff = (today - user.LastStudyDate.Value.Date).Days;
+                var lastDate = user.LastStudyDate.Value.Date;
+                var diff = (today - lastDate).Days;
 
-                if (diff == 1)
+                if (diff == 0)
+                {
+                    return;
+                }
+                else if (diff == 1)
                 {
                     user.CurrentStreak++;
                 }
-                else if (diff > 1)
+                else
                 {
                     user.CurrentStreak = 1;
                 }

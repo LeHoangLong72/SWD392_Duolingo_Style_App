@@ -26,13 +26,13 @@ namespace MyWebApiApp.Repository
                     x.AssignedDate == today);
 
             if (userTask == null)
-                throw new Exception("Task not found");
+                throw new Exception("Không tìm thấy nhiệm vụ!");
 
             if (!userTask.IsCompleted)
-                throw new Exception("Task not completed");
+                throw new Exception("Nhiệm vụ chưa hoàn thành");
 
             if (userTask.IsClaimed)
-                throw new Exception("Reward already claimed");
+                throw new Exception("Phần thưởng nhiệm vụ đã được nhận");
 
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
 
@@ -100,6 +100,32 @@ namespace MyWebApiApp.Repository
             .Include(x => x.Task)
             .Where(x => x.UserId == userId)
             .ToListAsync();
+        }
+
+        public async Task UpdateTaskProgressAsync(string userId, string taskType, int value)
+        {
+            var today = DateTime.UtcNow.Date;
+
+            var userTasks = await _context.UserTasks
+                .Include(x => x.Task)
+                .Where(x =>
+                    x.UserId == userId &&
+                    x.AssignedDate == today &&
+                    x.Task.TaskType == taskType &&
+                    !x.IsCompleted)
+                .ToListAsync();
+
+            foreach (var userTask in userTasks)
+            {
+                userTask.Progress += value;
+
+                if (userTask.Progress >= userTask.Task.TargetValue)
+                {
+                    userTask.IsCompleted = true;
+                }
+            }
+
+            await _context.SaveChangesAsync();
         }
     }
 }

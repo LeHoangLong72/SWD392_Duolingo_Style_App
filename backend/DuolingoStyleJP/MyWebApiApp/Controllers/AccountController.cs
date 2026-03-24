@@ -34,14 +34,14 @@ namespace MyWebApiApp.Controllers
 
             if(user == null)
             {
-                return Unauthorized("Invalid Username!");
+                return Unauthorized("Tên đăng nhập không hợp lệ!");
             }
 
             var result = await _signinManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
             if (!result.Succeeded)
             {
-                return Unauthorized("Username not found and/or password incorrect");
+                return Unauthorized("Tên đăng nhập hoặc mật khẩu không đúng!");
             }
             return Ok(
                 new NewUserDto

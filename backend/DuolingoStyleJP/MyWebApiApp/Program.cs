@@ -107,6 +107,9 @@ namespace MyWebApiApp
             builder.Services.AddScoped<IAchievementRepository, AchievementRepository>();
             builder.Services.AddScoped<IAchievementService, AchievementService>();
             builder.Services.AddScoped<ITaskRepository, TaskRepository>();
+            builder.Services.AddScoped<ILeaderboardRepository, LeaderboardRepository>();
+            builder.Services.AddScoped<ITaskProgressService, TaskProgressService>();
+            builder.Services.AddScoped<IPowerupService, PowerupService>();
 
             var app = builder.Build();
 

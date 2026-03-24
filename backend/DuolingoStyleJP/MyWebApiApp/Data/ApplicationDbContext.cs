@@ -27,6 +27,7 @@ namespace MyWebApiApp.Data
         public DbSet<UserAchievement> UserAchievements { get; set; }
         public DbSet<TaskItem> Tasks { get; set; }
         public DbSet<UserTask> UserTasks { get; set; }
+        public DbSet<UserMistake> UserMistakes { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

@@ -11,49 +11,81 @@ namespace MyWebApiApp.Repository
     public class ShopRepository : IShopRepository
     {
         private readonly ApplicationDbContext _context;
+        private readonly IPowerupService _powerupService;
 
-        public ShopRepository(ApplicationDbContext context)
+        public ShopRepository(ApplicationDbContext context, IPowerupService powerupService)
         {
             _context = context;
+            _powerupService = powerupService;
         }
 
         public async Task<bool> EquipItemAsync(string userId, int itemId)
         {
             var userItem = await _context.UserItems
-                .Include(ui => ui.Item)
-                .FirstOrDefaultAsync(ui => ui.UserId == userId && ui.ItemId == itemId);
+                 .Include(ui => ui.Item)
+                 .FirstOrDefaultAsync(ui => ui.UserId == userId && ui.ItemId == itemId);
 
             if (userItem == null)
-            {
                 return false;
-            }
-            if (userItem.Item.Category == "powerup")
-            {
-                _context.UserItems.Remove(userItem);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            else if (userItem.Item.Category == "outfit")
-            {
-                var equippedOutfits = await _context.UserItems
-                    .Include(ui => ui.Item)
-                    .Where(ui => ui.UserId == userId && ui.Item.Category == "outfit" && ui.IsEquipped)
-                    .ToListAsync();
 
-                foreach(var outfit in equippedOutfits)
-                {
-                    outfit.IsEquipped = false;
-                }
-                userItem.IsEquipped = !userItem.IsEquipped;
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            else if(userItem.Item.Category == "decoration") 
+            var item = userItem.Item;
+
+            // ======================
+            // POWERUP ITEM
+            // ======================
+            if (item.Category.Equals("powerup", StringComparison.OrdinalIgnoreCase))
             {
-                userItem.IsEquipped = !userItem.IsEquipped;
+                if (item.DurationMinutes == null)
+                    return false;
+
+                userItem.ActivatedAt = DateTime.UtcNow;
+                userItem.ExpiredAt = DateTime.UtcNow.AddMinutes(item.DurationMinutes.Value);
+
+                _context.UserItems.Remove(userItem);
+
                 await _context.SaveChangesAsync();
+                await _powerupService.ActivatePowerupAsync(userId, item.ItemId);
                 return true;
             }
+
+            //// ======================
+            //// OUTFIT ITEM
+            //// ======================
+            //if (item.Category.Equals("outfit", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var equippedOutfits = await _context.UserItems
+            //        .Include(ui => ui.Item)
+            //        .Where(ui =>
+            //            ui.UserId == userId &&
+            //            ui.Item.Category == "outfit" &&
+            //            ui.IsEquipped)
+            //        .ToListAsync();
+
+            //    foreach (var outfit in equippedOutfits)
+            //    {
+            //        outfit.IsEquipped = false;
+            //    }
+
+            //    userItem.IsEquipped = true;
+            //    userItem.IsConsumed = true;
+
+            //    await _context.SaveChangesAsync();
+            //    return true;
+            //}
+
+            //// ======================
+            //// DECORATION ITEM
+            //// ======================
+            //if (item.Category.Equals("decoration", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    userItem.IsEquipped = true;
+
+            //    userItem.IsConsumed = true;
+
+            //    await _context.SaveChangesAsync();
+            //    return true;
+            //}
+
             return false;
         }
 
@@ -70,22 +102,15 @@ namespace MyWebApiApp.Repository
         public async Task<UserProfileDto> GetUserInventoryAsync(string userId)
         {
             var user = await _context.Users
-                .Include(u => u.UserItems)
-                .ThenInclude(ui => ui.Item)
-                .FirstOrDefaultAsync(u => u.Id == userId);
+        .FirstOrDefaultAsync(u => u.Id == userId);
 
             if (user == null)
-            {
                 return new UserProfileDto();
-            }
 
-            return new UserProfileDto
-            {
-                Id = user.Id,
-                Username = user.UserName,
-                Email = user.Email,
-                Gems = user.Gems,
-                PurchasedItems = user.UserItems.Select(ui => new ItemDto
+            var items = await _context.UserItems
+                .Include(ui => ui.Item)
+                .Where(ui => ui.UserId == userId && !ui.IsConsumed)
+                .Select(ui => new ItemDto
                 {
                     Id = ui.Item.ItemId,
                     Name = ui.Item.Name,
@@ -95,7 +120,16 @@ namespace MyWebApiApp.Repository
                     Category = ui.Item.Category,
                     IsPurchased = true,
                     IsEquipped = ui.IsEquipped
-                }).ToList()
+                })
+                .ToListAsync();
+
+            return new UserProfileDto
+            {
+                Id = user.Id,
+                Username = user.UserName,
+                Email = user.Email,
+                Gems = user.Gems,
+                PurchasedItems = items
             };
         }
 
@@ -122,7 +156,11 @@ namespace MyWebApiApp.Repository
             }
 
             var existingPurchase = await _context.UserItems
-                .FirstOrDefaultAsync(ui => ui.UserId == userId && ui.ItemId == itemId);
+                .Include(ui => ui.Item)
+                .FirstOrDefaultAsync(ui => 
+                    ui.UserId == userId && 
+                    ui.ItemId == itemId &&
+                    !ui.Item.IsConsumable);
 
             if (existingPurchase != null)
             {
@@ -163,6 +201,29 @@ namespace MyWebApiApp.Repository
                 Message = $"Mua {item.Name} thành công!",
                 RemainingGems = user.Gems
             };
+        }
+
+        public async Task UseItemAsync(string userId, int itemId)
+        {
+            var userItem = await _context.UserItems
+        .Include(x => x.Item)
+        .FirstOrDefaultAsync(x =>
+            x.UserId == userId &&
+            x.ItemId == itemId &&
+            !x.IsConsumed);
+
+            if (userItem == null)
+                throw new Exception("User không có item này");
+
+            if (userItem.Item.DurationMinutes == null)
+                throw new Exception("Item này không cần kích hoạt");
+
+            userItem.ActivatedAt = DateTime.UtcNow;
+            userItem.ExpiredAt = DateTime.UtcNow.AddMinutes(userItem.Item.DurationMinutes.Value);
+            userItem.IsConsumed = true;
+            userItem.IsEquipped = false;
+
+            await _context.SaveChangesAsync();
         }
     }
 }

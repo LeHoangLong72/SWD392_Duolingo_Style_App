@@ -105,22 +105,18 @@
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.HeartsController",
-    "Method": "PracticeForHeart",
+    "Method": "PracticeMistake",
     "RelativePath": "api/hearts/practice",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "MyWebApiApp.Controllers.HeartsController",
-    "Method": "RefillHearts",
-    "RelativePath": "api/hearts/refill",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MyWebApiApp.DTOs.LessonContent.SubmitAnswerRequest",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -135,24 +131,18 @@
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.LeaderboardController",
-    "Method": "GetUserRank",
-    "RelativePath": "api/leaderboard/my-rank/{userId}",
-    "HttpMethod": "GET",
+    "Method": "RewardWeekly",
+    "RelativePath": "api/leaderboard/weekly-reward",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.LeaderboardController",
-    "Method": "GetWeeklyLeaderboard",
-    "RelativePath": "api/leaderboard/weekly",
+    "Method": "GetWeeklyTop3",
+    "RelativePath": "api/leaderboard/weekly-top3",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -171,7 +161,7 @@
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.LearningPathController",
-    "Method": "GetMistakes",
+    "Method": "GetMistakesAsync",
     "RelativePath": "api/learning-path/mistakes",
     "HttpMethod": "GET",
     "IsController": true,
@@ -285,32 +275,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MyWebApiApp.Controllers.ProfileController",
-    "Method": "GetUserSummary",
-    "RelativePath": "api/profile/summary/{userId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "MyWebApiApp.DTOs.Profile.UserSummaryDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
     "ContainingType": "MyWebApiApp.Controllers.ShopController",
     "Method": "EquipItem",
     "RelativePath": "api/shop/equip",
@@ -397,6 +361,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "MyWebApiApp.Controllers.ShopController",
+    "Method": "UseItem",
+    "RelativePath": "api/shop/use/{itemId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MyWebApiApp.Controllers.StreakController",

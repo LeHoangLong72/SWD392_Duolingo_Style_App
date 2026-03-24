@@ -51,18 +51,5 @@ namespace MyWebApiApp.Controllers
 
             return Ok(profile);
         }
-
-        [HttpGet("summary/{userId}")]
-        public async Task<ActionResult<UserSummaryDto>> GetUserSummary(string userId)
-        {
-            var summary = await _profileRepo.GetUserSummaryAsync(userId);
-
-            if (summary == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(summary);
-        }
     }
 }

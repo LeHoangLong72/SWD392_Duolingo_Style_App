@@ -97,14 +97,29 @@ namespace MyWebApiApp.Controllers
         }
 
         [HttpGet("mistakes")]
-        public IActionResult GetMistakes()
+        public async Task<IActionResult> GetMistakesAsync()
         {
-            // TODO: get user's wrong answers
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return Ok(new
-            {
-                message = "Mistake review endpoint created"
-            });
+            var mistakes = await _context.UserMistakes
+                .Where(x => x.UserId == userId)
+                .Include(x => x.Question)
+                    .ThenInclude(q => q.QuestionOptions)
+                .Select(x => new
+                {
+                    x.QuestionId,
+                    x.WrongCount,
+                    x.LastWrongAt,
+                    Question = x.Question.Content,
+                    Options = x.Question.QuestionOptions.Select(o => new
+                    {
+                        o.OptionId,
+                        o.OptionText
+                    })
+                })
+                .ToListAsync();
+
+            return Ok(mistakes);
         }
     }
 

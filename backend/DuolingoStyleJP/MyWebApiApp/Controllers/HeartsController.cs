@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MyWebApiApp.Data;
+using MyWebApiApp.DTOs.LessonContent;
 using MyWebApiApp.Interfaces;
 using System.Security.Claims;
 
@@ -10,10 +13,12 @@ namespace MyWebApiApp.Controllers
     public class HeartsController : ControllerBase
     {
         private readonly IHeartRepository _heartRepo;
+        private readonly ApplicationDbContext _context;
 
-        public HeartsController(IHeartRepository heartRepo)
+        public HeartsController(IHeartRepository heartRepo, ApplicationDbContext context)
         {
             _heartRepo = heartRepo;
+            _context = context;
         }
         private string GetUserId()
         {
@@ -32,26 +37,52 @@ namespace MyWebApiApp.Controllers
             return Ok(hearts);
         }
 
-        [HttpPost("refill")]
-        public async Task<IActionResult> RefillHearts()
-        {
-            // TODO: implement logic refill hearts using item
-
-            return Ok(new
-            {
-                message = "Refill hearts endpoint created (logic not implemented yet)"
-            });
-        }
 
         [HttpPost("practice")]
-        public async Task<IActionResult> PracticeForHeart()
+        public async Task<IActionResult> PracticeMistake([FromBody] SubmitAnswerRequest request)
         {
-            // TODO: implement practice lesson logic
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var option = await _context.QuestionOptions
+                .FirstOrDefaultAsync(o =>
+                    o.OptionId == request.SelectedOptionId &&
+                    o.QuestionId == request.QuestionId);
+
+            if (option == null)
+                return BadRequest("Invalid option");
+
+            var isCorrect = option.IsCorrect;
+
+            if (isCorrect)
+            {
+                // ✅ Xóa khỏi danh sách sai
+                var mistake = await _context.UserMistakes
+                    .FirstOrDefaultAsync(x =>
+                        x.UserId == userId &&
+                        x.QuestionId == request.QuestionId);
+
+                if (mistake != null)
+                {
+                    _context.UserMistakes.Remove(mistake);
+                }
+
+                // ❤️ Hồi tim
+                var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+
+                if (user.CurrentHearts < user.MaxHearts)
+                {
+                    user.CurrentHearts++;
+                }
+            }
+
+            await _context.SaveChangesAsync();
 
             return Ok(new
             {
-                message = "Practice for heart endpoint created (logic not implemented yet)"
+                isCorrect,
+                message = isCorrect ? "Correct! +1 heart ❤️" : "Sai rồi!"
             });
         }
+
     }
 }

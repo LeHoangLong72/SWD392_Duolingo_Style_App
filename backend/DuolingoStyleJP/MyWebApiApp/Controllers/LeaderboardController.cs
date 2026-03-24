@@ -1,47 +1,46 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyWebApiApp.Interfaces;
 
 namespace MyWebApiApp.Controllers
 {
     [Route("api/leaderboard")]
     [ApiController]
+    [Authorize]
     public class LeaderboardController : ControllerBase
     {
-        /// <summary>
-        /// Lấy bảng xếp hạng XP
-        /// </summary>
+
+        private readonly ILeaderboardRepository _leaderboardRepo;
+
+        public LeaderboardController(ILeaderboardRepository leaderboardRepo)
+        {
+            _leaderboardRepo = leaderboardRepo;
+        }
+
+
         [HttpGet]
-        public IActionResult GetLeaderboard()
+        public async Task<IActionResult> GetLeaderboard()
         {
-            // TODO: implement leaderboard logic
-
-            return Ok(new
-            {
-                message = "Leaderboard endpoint created"
-            });
+            var result = await _leaderboardRepo.GetLeaderboardAsync();
+            return Ok(result);
         }
 
-        [HttpGet("weekly")]
-        public IActionResult GetWeeklyLeaderboard()
+        [HttpGet("weekly-top3")]
+        public async Task<IActionResult> GetWeeklyTop3()
         {
-            // TODO: implement weekly leaderboard logic
-
-            return Ok(new
-            {
-                message = "Weekly leaderboard endpoint created"
-            });
+            var result = await _leaderboardRepo.GetWeeklyTop3Async();
+            return Ok(result);
         }
 
-        [HttpGet("my-rank/{userId}")]
-        public IActionResult GetUserRank(string userId)
+        [HttpPost("weekly-reward")]
+        public async Task<IActionResult> RewardWeekly()
         {
-            // TODO: implement user rank logic
+            await _leaderboardRepo.RewardWeeklyTopAsync();
 
             return Ok(new
             {
-                userId = userId,
-                rank = 0,
-                message = "User rank endpoint created"
+                message = "Weekly rewards distributed successfully"
             });
         }
     }

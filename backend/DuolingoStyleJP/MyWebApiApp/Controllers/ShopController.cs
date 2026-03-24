@@ -29,17 +29,6 @@ namespace MyWebApiApp.Controllers
             return User.FindFirstValue(ClaimTypes.NameIdentifier);
         }
 
-        ///// Lấy danh sách items
-        //[HttpGet("items")]
-        //public async Task<ActionResult<List<ItemDto>>> GetItems()
-        //{
-        //    var userId = GetUserId();
-
-        //    var items = await _shopRepository.GetAllItemsAsync(userId);
-
-        //    return Ok(items);
-        //}
-
         [HttpGet("items")]
         public async Task<ActionResult<List<ItemDto>>> GetAllItems(string? category)
         {
@@ -97,6 +86,16 @@ namespace MyWebApiApp.Controllers
             }
 
             return Ok(profile);
+        }
+
+        [HttpPost("use/{itemId}")]
+        public async Task<IActionResult> UseItem(int itemId)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await _shopRepository.UseItemAsync(userId, itemId);
+
+            return Ok("Item đã được kích hoạt");
         }
     }
 }

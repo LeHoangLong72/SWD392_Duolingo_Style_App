@@ -7,5 +7,6 @@ namespace MyWebApiApp.Interfaces
         Task<List<UserTask>> GetDailyTasksAsync(string userId);
         Task<object> ClaimTaskRewardAsync(string userId, int taskId);
         Task<List<UserTask>> GetTaskProgressAsync(string userId);
+        Task UpdateTaskProgressAsync(string userId, string taskType, int value);
     }
 }

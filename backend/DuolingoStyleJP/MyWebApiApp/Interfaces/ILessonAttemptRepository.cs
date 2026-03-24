@@ -9,7 +9,5 @@ namespace MyWebApiApp.Interfaces
         Task<LessonContentDto?> StartLessonAsync(string userId, int lessonId);
         Task<SubmitAnswerResponse> SubmitAnswerAsync(string userId, int attemptId, SubmitAnswerRequest request);
         Task<CompleteLessonResponse?> CompleteLessonAsync(string userId, int attemptId);
-        //Task<List<Question>> GetQuestionsForLessonAsync(int lessonId);
-        //Task<bool> ValidateAnswerAsync(int questionId, string answer);
     }
 }

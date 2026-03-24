@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MyWebApiApp.Data;
 using MyWebApiApp.DTOs.LessonContent;
 using MyWebApiApp.Extensions;
 using MyWebApiApp.Interfaces;
+using MyWebApiApp.Services;
 
 namespace MyWebApiApp.Controllers
 {
@@ -12,10 +14,14 @@ namespace MyWebApiApp.Controllers
     public class LessonAttemptController : ControllerBase
     {
         private readonly ILessonAttemptRepository _lessonContentRepo;
+        private readonly IPowerupService _powerupService;
+        private readonly ApplicationDbContext _context;
 
-        public LessonAttemptController(ILessonAttemptRepository lessonContentRepo)
+        public LessonAttemptController(ILessonAttemptRepository lessonContentRepo, IPowerupService powerupService, ApplicationDbContext context)
         {
             _lessonContentRepo = lessonContentRepo;
+            _powerupService = powerupService;
+            _context = context;
         }
 
         // GET: api/lesson-content/{lessonId}
@@ -66,12 +72,17 @@ namespace MyWebApiApp.Controllers
         public async Task<IActionResult> CompleteLesson(int attemptId)
         {
             var userId = User.GetUserId();
-            var result = await _lessonContentRepo.CompleteLessonAsync(userId, attemptId);
+            var lessonAttempt = await _lessonContentRepo.CompleteLessonAsync(userId, attemptId);
             
-            if (result == null)
+            if (lessonAttempt == null)
                 return NotFound(new { message = "Lesson attempt not found" });
 
-            return Ok(result);
+
+            int baseXP = lessonAttempt.EarnedXP;
+            int finalXP = await _powerupService.ApplyPowerupsAsync(userId, baseXP);
+
+            lessonAttempt.EarnedXP = finalXP;
+            return Ok(lessonAttempt);
         }
     }
 }

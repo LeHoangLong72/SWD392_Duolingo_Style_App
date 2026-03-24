@@ -9,6 +9,6 @@ namespace MyWebApiApp.Interfaces
         Task<PurchaseItemResponse> PurchaseItemAsync(string userId, int itemId);
         Task<UserProfileDto> GetUserInventoryAsync(string userId);
         Task<bool> EquipItemAsync(string userId, int itemId);
-        
+        Task UseItemAsync(string userId, int itemId);
     }
 }

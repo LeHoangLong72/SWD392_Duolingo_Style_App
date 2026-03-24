@@ -159,23 +159,30 @@
         }
       }
     },
-    "/api/hearts/refill": {
-      "post": {
-        "tags": [
-          "Hearts"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
     "/api/hearts/practice": {
       "post": {
         "tags": [
           "Hearts"
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitAnswerRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitAnswerRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitAnswerRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success"
@@ -195,7 +202,7 @@
         }
       }
     },
-    "/api/leaderboard/weekly": {
+    "/api/leaderboard/weekly-top3": {
       "get": {
         "tags": [
           "Leaderboard"
@@ -207,20 +214,10 @@
         }
       }
     },
-    "/api/leaderboard/my-rank/{userId}": {
-      "get": {
+    "/api/leaderboard/weekly-reward": {
+      "post": {
         "tags": [
           "Leaderboard"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -419,45 +416,6 @@
         }
       }
     },
-    "/api/profile/summary/{userId}": {
-      "get": {
-        "tags": [
-          "Profile"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserSummaryDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserSummaryDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/UserSummaryDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/api/shop/items": {
       "get": {
         "tags": [
@@ -609,6 +567,29 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/shop/use/{itemId}": {
+      "post": {
+        "tags": [
+          "Shop"
+        ],
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
           }
         }
       }
@@ -833,32 +814,6 @@
               "$ref": "#/components/schemas/ItemDto"
             },
             "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserSummaryDto": {
-        "type": "object",
-        "properties": {
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
-          "totalXP": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "currentStreak": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "currentHearts": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lessonsCompleted": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

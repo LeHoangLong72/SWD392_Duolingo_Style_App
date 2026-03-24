@@ -51,7 +51,7 @@ namespace MyWebApiApp.Controllers
 
             if (userAchievement == null)
             {
-                return BadRequest("Achievement not unlocked");
+                return BadRequest("Thành tựu chưa mở khóa!");
             }
 
             // TODO: add reward logic
@@ -61,7 +61,7 @@ namespace MyWebApiApp.Controllers
             return Ok(new
             {
                 success = true,
-                message = "Achievement reward claimed",
+                message = "Phần thưởng thành tựu đã được nhận!",
                 rewardXP,
                 rewardGems
             });
