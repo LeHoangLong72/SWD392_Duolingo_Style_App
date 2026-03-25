@@ -34,6 +34,11 @@ namespace MyWebApiApp.Repository
                 .ToListAsync();
         }
 
+        public async Task<AppUser?> GetUserByIdAsync(string userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+        }
+
         public async Task<bool> IsAchievementUnlockedAsync(string userId, int achievementId)
         {
             return await _context.UserAchievements
@@ -56,5 +61,7 @@ namespace MyWebApiApp.Repository
 
             await _context.UserAchievements.AddAsync(userAchievement);
         }
+
+        
     }
 }

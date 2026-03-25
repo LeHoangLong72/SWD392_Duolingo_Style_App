@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyWebApiApp.Data;
+using MyWebApiApp.DTOs.Achievement;
 using MyWebApiApp.DTOs.LessonContent;
 using MyWebApiApp.Enums;
 using MyWebApiApp.Interfaces;
@@ -49,7 +50,7 @@ namespace MyWebApiApp.Repository
                 ? 0
                 : (double)attempt.CorrectAnswers / attempt.TotalQuestions;
 
-            attempt.IsPassed = scorePercent >= 0.8;
+            attempt.IsPassed = scorePercent >= 0.5;
 
             int earnedXP = 0;
             bool isFirstLessonToday = false;
@@ -181,15 +182,23 @@ namespace MyWebApiApp.Repository
 
             await _context.SaveChangesAsync();
 
-            await _achievementService.CheckLessonAchievementsAsync(userId);
-
+            var newlyUnlockedAchievements = await _achievementService.CheckLessonAchievementsAsync(userId);
+            var newlyXPUnlocked = await _achievementService.CheckTotalXPAchievementsAsync(userId);
             return new CompleteLessonResponse
             {
                 TotalQuestions = attempt.TotalQuestions,
                 CorrectAnswers = attempt.CorrectAnswers,
                 IsPassed = attempt.IsPassed,
                 EarnedXP = earnedXP,
-                IsStreakIncreased = isFirstLessonToday
+                IsStreakIncreased = isFirstLessonToday,
+                NewlyUnlockedAchievements = newlyUnlockedAchievements
+                .Select(a => new AchievementDto
+                {
+                    AchievementId = a.AchievementId,
+                    Name = a.Name,
+                    Description = a.Description,
+                    IconUrl = a.IconUrl
+                }).ToList()
             };
         }
 

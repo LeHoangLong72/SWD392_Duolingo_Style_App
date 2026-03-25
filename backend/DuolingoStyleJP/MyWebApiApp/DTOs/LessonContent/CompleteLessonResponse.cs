@@ -1,4 +1,6 @@
-﻿namespace MyWebApiApp.DTOs.LessonContent
+﻿using MyWebApiApp.DTOs.Achievement;
+
+namespace MyWebApiApp.DTOs.LessonContent
 {
     public class CompleteLessonResponse
     {
@@ -7,5 +9,6 @@
         public bool IsPassed { get; set; }
         public int EarnedXP { get; set; }
         public bool IsStreakIncreased { get; set; }
+        public List<AchievementDto> NewlyUnlockedAchievements { get; set; } = new List<AchievementDto>();
     }
 }

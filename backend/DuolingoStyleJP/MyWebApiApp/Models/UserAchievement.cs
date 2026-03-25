@@ -9,6 +9,7 @@
         public int AchievementId { get; set; }
 
         public DateTime UnlockedAt { get; set; }
+        public bool IsClaimed { get; set; } = false;
 
         public Achievement Achievement { get; set; }
 

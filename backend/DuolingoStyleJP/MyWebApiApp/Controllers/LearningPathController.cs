@@ -13,48 +13,28 @@ namespace MyWebApiApp.Controllers
     [ApiController]
     public class LearningPathController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
-        private readonly UserManager<AppUser> _userManager;
+        private readonly ILearningPathRepository _learningPathRepo;
 
-        public LearningPathController(
-            ApplicationDbContext context,
-            UserManager<AppUser> userManager)
+        public LearningPathController(ILearningPathRepository learningPathRepo)
         {
-            _context = context;
-            _userManager = userManager;
+            _learningPathRepo = learningPathRepo;
         }
 
 
         [HttpGet("japanese-path")]
         public async Task<IActionResult> GetPath()
         {
-            // 1️⃣ Lấy UserId từ JWT
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) return Unauthorized("Token không hợp lệ");
 
-            if (string.IsNullOrEmpty(userId))
+            var lessons = await _learningPathRepo.GetAllLessonsAsync();
+            var completedIds = await _learningPathRepo.GetCompletedLessonIdsAsync(userId);
+
+            var result = lessons.Select(l => new
             {
-                return Unauthorized("Token không hợp lệ");
-            }
-            // 2️⃣ Lấy toàn bộ Lesson
-            var lessons = await _context.Lessons
-                .OrderBy(l => l.LessonId)
-                .ToListAsync();
-
-            // 3️⃣ Lấy danh sách LessonId đã hoàn thành
-            var completedLessonIds = await _context.UserProgress
-                .Where(p => p.UserId == userId)
-                .Select(p => p.LessonId)
-                .ToListAsync();
-
-            // 4️⃣ Merge lại
-            var result = lessons.Select(lesson => new
-            {
-                lesson.LessonId,
-                lesson.LessonName,
-                
-
-                // Nếu tồn tại trong UserProgress => đã hoàn thành
-                IsCompleted = completedLessonIds.Contains(lesson.LessonId)
+                l.LessonId,
+                l.LessonName,
+                IsCompleted = completedIds.Contains(l.LessonId)
             });
 
             return Ok(result);
@@ -65,33 +45,20 @@ namespace MyWebApiApp.Controllers
         [HttpGet("my-progress")]
         public async Task<IActionResult> GetMyProgress()
         {
-            // Nếu chưa đăng nhập
-            if (User?.Identity == null || !User.Identity.IsAuthenticated)
-            {
-                return Unauthorized("Người dùng chưa đăng nhập");
-            }
-
-            // Lấy UserId từ token
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) return Unauthorized("Token không hợp lệ");
 
-            if (string.IsNullOrEmpty(userId))
+            var progress = await _learningPathRepo.GetUserProgressAsync(userId);
+
+            var result = progress.Select(p => new
             {
-                return Unauthorized("Token không hợp lệ hoặc không chứa UserId");
-            }
+                p.LessonId,
+                LessonName = p.Lesson.LessonName,
+                p.CompletedDate,
+                p.EarnedXP
+            });
 
-            var progress = await _context.UserProgress
-                .Where(p => p.UserId == userId)
-                .Include(p => p.Lesson)
-                .Select(p => new
-                {
-                    p.LessonId,
-                    LessonName = p.Lesson.LessonName,
-                    p.CompletedDate,
-                    p.EarnedXP
-                })
-                .ToListAsync();
-
-            return Ok(progress);
+            return Ok(result);
 
 
         }
@@ -100,26 +67,24 @@ namespace MyWebApiApp.Controllers
         public async Task<IActionResult> GetMistakesAsync()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId)) return Unauthorized("Token không hợp lệ");
 
-            var mistakes = await _context.UserMistakes
-                .Where(x => x.UserId == userId)
-                .Include(x => x.Question)
-                    .ThenInclude(q => q.QuestionOptions)
-                .Select(x => new
+            var mistakes = await _learningPathRepo.GetUserMistakesAsync(userId);
+
+            var result = mistakes.Select(x => new
+            {
+                x.QuestionId,
+                x.WrongCount,
+                x.LastWrongAt,
+                Question = x.Question.Content,
+                Options = x.Question.QuestionOptions.Select(o => new
                 {
-                    x.QuestionId,
-                    x.WrongCount,
-                    x.LastWrongAt,
-                    Question = x.Question.Content,
-                    Options = x.Question.QuestionOptions.Select(o => new
-                    {
-                        o.OptionId,
-                        o.OptionText
-                    })
+                    o.OptionId,
+                    o.OptionText
                 })
-                .ToListAsync();
+            });
 
-            return Ok(mistakes);
+            return Ok(result);
         }
     }
 

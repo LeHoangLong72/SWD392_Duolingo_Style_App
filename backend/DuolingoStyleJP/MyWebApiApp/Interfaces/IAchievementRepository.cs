@@ -11,5 +11,6 @@ namespace MyWebApiApp.Interfaces
         Task UnlockAchievementAsync(string userId, int achievementId);
         Task<UserAchievement?> GetUserAchievementAsync(string userId, int achievementId);
         Task SaveChangesAsync();
+        Task<AppUser?> GetUserByIdAsync(string userId);
     }
 }

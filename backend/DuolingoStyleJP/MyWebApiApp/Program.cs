@@ -99,7 +99,7 @@ namespace MyWebApiApp
             builder.Services.AddScoped<ITokenService, TokenService>();
             builder.Services.AddScoped<IAlphabetRepository, AlphabetRepository>();
             builder.Services.AddScoped<IShopRepository, ShopRepository>();
-            builder.Services.AddScoped<ILearningRepository, LearningRepository>();
+            builder.Services.AddScoped<ILearningPathRepository, LearningPathRepository>();
             builder.Services.AddScoped<ILessonAttemptRepository, LessonAttemptRepository>();
             builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
             builder.Services.AddScoped<IStreakRepository, StreakRepository>();
@@ -110,6 +110,7 @@ namespace MyWebApiApp
             builder.Services.AddScoped<ILeaderboardRepository, LeaderboardRepository>();
             builder.Services.AddScoped<ITaskProgressService, TaskProgressService>();
             builder.Services.AddScoped<IPowerupService, PowerupService>();
+            builder.Services.AddScoped<ILearningPathRepository, LearningPathRepository>();
 
             var app = builder.Build();
 

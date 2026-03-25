@@ -54,9 +54,27 @@ namespace MyWebApiApp.Controllers
                 return BadRequest("Thành tựu chưa mở khóa!");
             }
 
+            if (userAchievement.IsClaimed)
+            {
+                return BadRequest("Bạn đã nhận thưởng của thành tựu này rồi!");
+            }
+
             // TODO: add reward logic
             int rewardXP = 50;
             int rewardGems = 10;
+
+            userAchievement.IsClaimed = true;
+            await _achievementRepo.SaveChangesAsync();
+
+            var user = await _achievementRepo.GetUserByIdAsync(userId);
+            if (user != null)
+            {
+                user.TotalXP += rewardXP;
+                user.CurrentXP += rewardXP;
+                user.Gems += rewardGems;
+
+                await _achievementRepo.SaveChangesAsync();
+            }
 
             return Ok(new
             {
