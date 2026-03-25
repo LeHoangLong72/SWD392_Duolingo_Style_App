@@ -30,7 +30,7 @@ namespace MyWebApiApp.Repository
                     TotalXP = g.Sum(x => x.EarnedXP)
                 })
                 .OrderByDescending(x => x.TotalXP)
-                .Take(50)
+                .Take(10)
                 .ToListAsync();
 
             for (int i = 0; i < leaderboard.Count; i++)

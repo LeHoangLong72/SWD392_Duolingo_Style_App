@@ -3,7 +3,6 @@ using MyWebApiApp.Data;
 using MyWebApiApp.DTOs.Item;
 using MyWebApiApp.DTOs.UserProfile;
 using MyWebApiApp.Interfaces;
-using MyWebApiApp.Mappers;
 using MyWebApiApp.Models;
 
 namespace MyWebApiApp.Repository
@@ -48,43 +47,43 @@ namespace MyWebApiApp.Repository
                 return true;
             }
 
-            //// ======================
-            //// OUTFIT ITEM
-            //// ======================
-            //if (item.Category.Equals("outfit", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    var equippedOutfits = await _context.UserItems
-            //        .Include(ui => ui.Item)
-            //        .Where(ui =>
-            //            ui.UserId == userId &&
-            //            ui.Item.Category == "outfit" &&
-            //            ui.IsEquipped)
-            //        .ToListAsync();
+            // ======================
+            // OUTFIT ITEM
+            // ======================
+            if (item.Category.Equals("outfit", StringComparison.OrdinalIgnoreCase))
+            {
+                var equippedOutfits = await _context.UserItems
+                    .Include(ui => ui.Item)
+                    .Where(ui =>
+                        ui.UserId == userId &&
+                        ui.Item.Category == "outfit" &&
+                        ui.IsEquipped)
+                    .ToListAsync();
 
-            //    foreach (var outfit in equippedOutfits)
-            //    {
-            //        outfit.IsEquipped = false;
-            //    }
+                foreach (var outfit in equippedOutfits)
+                {
+                    outfit.IsEquipped = false;
+                }
 
-            //    userItem.IsEquipped = true;
-            //    userItem.IsConsumed = true;
+                userItem.IsEquipped = true;
+                userItem.IsConsumed = true;
 
-            //    await _context.SaveChangesAsync();
-            //    return true;
-            //}
+                await _context.SaveChangesAsync();
+                return true;
+            }
 
-            //// ======================
-            //// DECORATION ITEM
-            //// ======================
-            //if (item.Category.Equals("decoration", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    userItem.IsEquipped = true;
+            // ======================
+            // DECORATION ITEM
+            // ======================
+            if (item.Category.Equals("decoration", StringComparison.OrdinalIgnoreCase))
+            {
+                userItem.IsEquipped = true;
 
-            //    userItem.IsConsumed = true;
+                userItem.IsConsumed = true;
 
-            //    await _context.SaveChangesAsync();
-            //    return true;
-            //}
+                await _context.SaveChangesAsync();
+                return true;
+            }
 
             return false;
         }
@@ -96,7 +95,17 @@ namespace MyWebApiApp.Repository
             {
                 query = query.Where(i => i.Category.ToLower() == category.ToLower());
             }
-            return await query.Select(i => i.ToItemResponse()).ToListAsync();
+            return await query.Select(i => new ItemDto
+            {
+                Id = i.ItemId,
+                Name = i.Name,
+                Description = i.Description,
+                Price = i.Price,
+                ImageUrl = i.ImageUrl,
+                Category = i.Category,
+                IsPurchased = false,
+                IsEquipped = false
+            }).ToListAsync();
         }
 
         public async Task<UserProfileDto> GetUserInventoryAsync(string userId)
